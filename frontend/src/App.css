@@ -14,15 +14,39 @@
   box-sizing: border-box;
 }
 
+
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   overflow: hidden;
   height: 100vh;
   font-family: "Roboto", "Cabin condensed", "Cambay", system-ui;
   font-weight: 400;
   line-height: 1.25;
   color: #232323;
-} /*# sourceMappingURL=App.css.map */
+} 
+
+/*  home page -------------------------------*/
+
+.home-page {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+#homeImage {
+  width: 20rem;
+  height: 20rem;
+}
+
+#homeParagraph {
+  margin-left: 5%;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: medium;
+}

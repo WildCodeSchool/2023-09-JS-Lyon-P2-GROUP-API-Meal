@@ -1,8 +1,5 @@
-/* eslint-disable dot-notation */
 import PropTypes from "prop-types";
 import { useState } from "react";
-// eslint-disable-next-line import/no-extraneous-dependencies
-import axios from "axios";
 import styles from "./Searchbar.module.css";
 
 function Searchbar({ setResults }) {
@@ -20,12 +17,11 @@ function Searchbar({ setResults }) {
   };
 
   const fetchData = async (value) => {
-    const res = await axios.get(
-      "https://api-pokemon-fr.vercel.app/api/v1/pokemon"
-    );
+    const res = await fetch("https://api-pokemon-fr.vercel.app/api/v1/pokemon");
     const searchTerm = removeAccents(value);
 
-    const results = res.data
+    const data = await res.json();
+    const results = data
       .filter(
         (pokemon) => removeAccents(pokemon.name.fr).startsWith(searchTerm) // 👈 see removeAccents && search from the pokemon's name start.
       )
@@ -45,7 +41,7 @@ function Searchbar({ setResults }) {
   return (
     <form className={styles.form} action="">
       <input
-        className={styles["form__input"]}
+        className={styles.form__input}
         type="text"
         placeholder="Gotta Catch'em All..."
         value={input}

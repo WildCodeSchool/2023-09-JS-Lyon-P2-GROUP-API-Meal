@@ -1,0 +1,19 @@
+@import "./style/utils";
+@import "./components/Search/Searchbar/Searchbar.module.css";
+@import "./components/Search/Searchlist/Searchlist.module.css";
+
+*,
+*::before,
+*::after {
+  @include reset;
+}
+
+body {
+  @include flexboxColumn();
+  overflow: hidden;
+  height: 100vh;
+  font-family: $ff-primary, $ff-secondary, $ff-tertiary, $ff-system_ui;
+  font-weight: $fw-regular;
+  line-height: $line-height;
+  color: $fclr-black;
+}

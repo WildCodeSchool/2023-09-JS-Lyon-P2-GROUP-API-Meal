@@ -4,25 +4,23 @@
 /* COLORS */
 /* FONTS */
 /* DISPLAY */
-@import "./components/Search/Searchbar/Searchbar.module.css";
-@import "./components/Search/Searchlist/Searchlist.module.css";
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
+.results-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  height: 100vh;
-  font-family: "Roboto", "Cabin condensed", "Cambay", system-ui;
-  font-weight: 400;
-  line-height: 1.25;
-  color: #232323;
-} /*# sourceMappingURL=App.css.map */
+  cursor: pointer;
+  margin: 1em 0;
+  font-size: 1.25rem;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.results-list__result {
+  padding: 0.25em;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  font-family: "Cabin condensed";
+  font-weight: 600;
+  font-size: 1.125rem;
+} /*# sourceMappingURL=Searchlist.module.css.map */

@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <HomePage />
-     <Search setPokemon={setPokemon} pokemon={pokemon} />;
+      <Search setPokemon={setPokemon} pokemon={pokemon} />;
     </div>
   );
 }

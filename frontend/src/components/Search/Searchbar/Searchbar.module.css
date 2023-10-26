@@ -4,8 +4,12 @@
 /* COLORS */
 /* FONTS */
 /* DISPLAY */
+.form {
+  text-align: center;
+}
 .form__input {
   border: 3px solid black;
+  width: 100%;
   border-radius: 50px;
   padding: 0.85rem;
   font-size: 1.6rem;

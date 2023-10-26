@@ -9,11 +9,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
   cursor: pointer;
-  margin: 1em 0;
-  font-size: 1.25rem;
+  width: 100%;
+  margin-top: 1rem;
   border-radius: 25px;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .results-list__result {
   padding: 0.25em;
@@ -22,5 +23,6 @@
   border: none;
   font-family: "Cabin condensed";
   font-weight: 600;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
+  color: whitesmoke;
 } /*# sourceMappingURL=Searchlist.module.css.map */

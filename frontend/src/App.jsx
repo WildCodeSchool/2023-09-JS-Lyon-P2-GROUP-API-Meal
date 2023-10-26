@@ -8,8 +8,8 @@ function App() {
 
   return (
     <div className="App">
+      <Search setPokemon={setPokemon} pokemon={pokemon} />
       <HomePage />
-      <Search setPokemon={setPokemon} pokemon={pokemon} />;
     </div>
   );
 }

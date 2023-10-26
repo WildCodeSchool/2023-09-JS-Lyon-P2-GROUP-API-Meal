@@ -9,7 +9,6 @@
 }
 
 body {
-  @include flexboxColumn();
   overflow: hidden;
   height: 100vh;
   font-family: $ff-primary, $ff-secondary, $ff-tertiary, $ff-system_ui;

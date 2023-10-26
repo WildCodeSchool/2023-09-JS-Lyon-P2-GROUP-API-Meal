@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <Search setPokemon={setPokemon} pokemon={pokemon} />
       <HomePage />
-      <Search setPokemon={setPokemon} pokemon={pokemon} />;
     </div>
   );
 }

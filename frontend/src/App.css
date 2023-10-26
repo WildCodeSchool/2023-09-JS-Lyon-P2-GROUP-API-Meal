@@ -19,7 +19,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   overflow: hidden;
   height: 100vh;
   font-family: "Roboto", "Cabin condensed", "Cambay", system-ui;
@@ -27,9 +26,7 @@ body {
   line-height: 1.25;
   color: #232323;
 }
-
 /*  home page -------------------------------*/
-
 .home-page {
   display: flex;
   flex-direction: row;
@@ -48,4 +45,41 @@ body {
   margin-left: 5%;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: medium;
+}
+
+/* -------------------------nav bar -------------------------------------*/
+.nav-bar {
+  width: 100%;
+  height: 2rem;
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1rem;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: auto;
+}
+
+nav #nav-pokedex {
+  margin-left: 2%;
+  margin-top: 1%;
+  font-size: 1.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+}
+nav #logo {
+  margin-right: 4%;
+  margin-top: 2%;
+}
+/* le ham button */
+.span1 {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  border-radius: 5px;
+  margin: 5px 0px;
 }

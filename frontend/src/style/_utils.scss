@@ -1,0 +1,107 @@
+// IMPORTS
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"); // ROBOTO
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap"); // CABIN CONDENSED
+@import url("https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&display=swap"); // CAMBAY
+
+// VARIABLES
+
+/* COLORS */
+$clr-water: #9db7f5;
+$clr-steal: #d1d1e0;
+$clr-rock: #d1c17d;
+$clr-psychic: #f192b2;
+$clr-poison: #c183c1;
+$clr-normal: #c6c6a7;
+
+$clr-ice: #bce6e6;
+$clr-ground: #ebd69d;
+$clr-grass: #a7d88d;
+$clr-ghost: #a292bc;
+$clr-flying: #a890f0;
+$clr-fire: #f5ac78;
+
+$clr-fighting: #d67873;
+$clr-fairy: #f4bdc9;
+$clr-electric: #fae078;
+$clr-dragon: #a27dfa;
+$clr-dark: #a29288;
+$clr-bug: #c6d16e;
+
+$clr-cardFooter: white;
+
+/* FONTS */
+$ff-primary: "Roboto";
+$ff-secondary: "Cabin condensed";
+$ff-tertiary: "Cambay";
+$ff-system_ui: system-ui;
+$fw-thin: 100; // ROBOTO
+$fw-light: 300; // ROBOTO
+$fw-regular: 400; // ALL
+$fw-medium: 500; // ROBOTO, CABIN CONDENSED
+$fw-semi-bold: 600; // CABIN CONDENSED
+$fw-bold: 700; // ALL
+$fw-black: 900; // ROBOTO
+
+$fclr-black: #232323;
+$fclr-white: #ffffff;
+
+$line-height: 1.25;
+
+// MIXINS
+
+/* DISPLAY */
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flexboxRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexboxColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin iconBoxShadow {
+  background: #92bc2c;
+  box-shadow: 0 0 20px #92bc2c;
+}
+
+@mixin icon-hover($theme: black) {
+  border-radius: 100%;
+  box-shadow: 0 0 20px $theme;
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  transition: 200ms all;
+
+  &:hover,
+  &:active {
+    filter: saturate(200%);
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
+@mixin pokemonSizeSmall {
+  width: 7.8rem;
+  height: 7.8rem;
+}
+
+@mixin pokemonSizeMedium {
+  width: 17.8rem;
+  height: 17.8rem;
+}
+
+@mixin pokemonSizeMedium {
+  width: 21.125rem;
+  height: 21.125rem;
+}

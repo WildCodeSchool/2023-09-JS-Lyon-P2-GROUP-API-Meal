@@ -1,20 +1,31 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&display=swap");
+/* COLORS */
+/* FONTS */
+/* DISPLAY */
+@import "./components/Search/Searchbar/Searchbar.module.css";
+@import "./components/Search/Searchlist/Searchlist.module.css";
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.App {
-  width: 80%;
-  height: auto;
-  margin: auto;
-  padding: 2%;
+body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 1px 5px 5px rgb(36, 36, 75);
-  border-radius: 1%;
+
+  overflow: hidden;
+  height: 100vh;
+  font-family: "Roboto", "Cabin condensed", "Cambay", system-ui;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #232323;
 }
 
 /*  home page -------------------------------*/

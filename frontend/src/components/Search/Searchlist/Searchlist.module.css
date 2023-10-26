@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&display=swap");
+/* COLORS */
+/* FONTS */
+/* DISPLAY */
+.results-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 1em 0;
+  font-size: 1.25rem;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.results-list__result {
+  padding: 0.25em;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  font-family: "Cabin condensed";
+  font-weight: 600;
+  font-size: 1.125rem;
+} /*# sourceMappingURL=Searchlist.module.css.map */

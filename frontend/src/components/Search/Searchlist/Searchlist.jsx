@@ -13,6 +13,7 @@ export default function Searchlist({ results, setPokemon }) {
   // 👇 Needs to close on click
   const handleResult = (value) => {
     setPokemon(value);
+    console.info(`You clicked on ${value}`);
   };
 
   return (
@@ -30,5 +31,3 @@ export default function Searchlist({ results, setPokemon }) {
     </div>
   );
 }
-
-// onClick={handleResult(result.name.fr)}

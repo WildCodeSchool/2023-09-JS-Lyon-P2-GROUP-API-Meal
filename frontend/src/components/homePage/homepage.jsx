@@ -2,19 +2,17 @@ import React from "react";
 
 function Home() {
   return (
-    <div className="home-page">
-      <div id="div-image">
-        <img
-          id="homeImage"
-          src="src/assets/homepicture.png"
-          alt="pokemon click me "
-        />
+    <div id="div-image">
+      <img
+        id="homeImage"
+        src="src/assets/homepicture.png"
+        alt="pokemon click me "
+      />
 
-        <p id="homeParagraph">
-          It’s empty ! <br />
-          Catch’em Now !
-        </p>
-      </div>
+      <h2 id="homeParagraph">
+        It’s empty ! <br />
+        Catch’em Now !
+      </h2>
     </div>
   );
 }

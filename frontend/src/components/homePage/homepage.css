@@ -1,0 +1,13 @@
+#div-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#homeImage {
+  width: 375px;
+  height: auto;
+  margin-bottom: 3rem;
+  filter: drop-shadow(rgba(0, 0, 0, 0.25) 0 40px 50px);
+}

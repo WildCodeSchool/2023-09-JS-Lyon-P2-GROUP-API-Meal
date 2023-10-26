@@ -1,6 +1,7 @@
 @import "./style/utils";
 @import "./components/Search/Searchbar/Searchbar.module.css";
 @import "./components/Search/Searchlist/Searchlist.module.css";
+@import "./components/homePage/homepage.css";
 
 *,
 *::before,
@@ -15,4 +16,21 @@ body {
   font-weight: $fw-regular;
   line-height: $line-height;
   color: $fclr-black;
+}
+
+/* -------------------------nav bar -------------------------------------*/
+.nav-bar {
+  @include flexboxRow;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin: 1rem 0 2rem 0;
+}
+
+#nav-pokedex {
+  font: $fw-bold 2rem $ff-primary;
+}
+
+#logo img {
+  width: 35px;
+  height: 35px;
 }

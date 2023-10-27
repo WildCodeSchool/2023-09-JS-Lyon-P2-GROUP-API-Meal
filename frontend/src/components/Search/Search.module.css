@@ -1,0 +1,5 @@
+.container {
+  position: relative;
+  width: clamp(375px, 100%, 700px);
+  margin-inline: auto;
+} /*# sourceMappingURL=Search.module.css.map */

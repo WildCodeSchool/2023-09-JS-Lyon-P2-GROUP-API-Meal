@@ -1,0 +1,22 @@
+@import "../../../style/utils";
+
+.results-list {
+  @include flexboxColumn;
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &__result {
+    padding: 0.25em;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    font-family: $ff-secondary;
+    font-weight: $fw-semi-bold;
+    font-size: 1.5rem;
+    color: whitesmoke;
+  }
+}

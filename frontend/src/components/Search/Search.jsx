@@ -5,9 +5,12 @@ import Searchbar from "./Searchbar/Searchbar";
 import styles from "./Search.module.css";
 
 export default function Search({ setPokemon }) {
+  Search.defaultProps = {
+    setPokemon: undefined,
+  };
   // 👇 "setResults" must be a function
   Search.propTypes = {
-    setPokemon: PropTypes.func.isRequired,
+    setPokemon: PropTypes.func,
   };
 
   const [results, setResults] = useState([]);

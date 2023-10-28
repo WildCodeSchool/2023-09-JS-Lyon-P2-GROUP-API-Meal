@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Navbar from "../Navbar/Navbar";
+import Nav from "../Navbar/nav";
 import Name from "./Name/Name";
 import StatNavbar from "./StatsNavbar/StatNavbar";
 import styles from "./Card.module.css";
@@ -10,7 +10,7 @@ export default function Card() {
   console.info(pokemonName);
   return (
     <main className={styles.container}>
-      <Navbar pokemonName={pokemonName} />
+      <Nav pokemonName={pokemonName} />
       <Name pokemonName={pokemonName} />
       <StatNavbar pokemonName={pokemonName} />
     </main>

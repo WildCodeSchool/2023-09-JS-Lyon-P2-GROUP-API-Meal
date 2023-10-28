@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import styles from "./Searchlist.module.css";
 
 export default function Searchlist({ results }) {
+  console.info(typeof results);
   // 👇 "setPokemon" must be a function // 👇 "results" must be an array
   Searchlist.propTypes = {
-    results: PropTypes.arrayOf.isRequired,
+    results: PropTypes.objectOf.isRequired,
   };
   // 👇 Make the research more user-friendly (case & accent ain't needed).
   const removeAccents = (str) => {
@@ -19,9 +20,11 @@ export default function Searchlist({ results }) {
   return (
     <div className={styles["results-list"]}>
       {limitedResults.map((result) => (
-        <Link to={`/Card/${removeAccents(result.name.fr)}`}>
+        <Link
+          key={result.name.fr}
+          to={`/Card/${removeAccents(result.name.fr)}`}
+        >
           <button
-            key={result.name.fr}
             className={styles["results-list__result"]}
             /* onClick={() => handleResult(result.name.fr)} */
             type="button"

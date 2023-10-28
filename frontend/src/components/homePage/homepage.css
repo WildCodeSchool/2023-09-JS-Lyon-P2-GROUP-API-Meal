@@ -1,8 +1,6 @@
 #div-image {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
+  margin-top: 7rem;
 }
 
 #homeImage {

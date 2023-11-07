@@ -7,7 +7,7 @@ import styles from "./Card.module.css";
 
 export default function Card() {
   const { pokemonName } = useParams();
-  console.info(pokemonName);
+
   return (
     <main className={styles.container}>
       <Navbar pokemonName={pokemonName} />

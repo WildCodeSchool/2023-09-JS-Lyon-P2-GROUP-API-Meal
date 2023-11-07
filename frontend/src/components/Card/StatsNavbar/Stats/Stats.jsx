@@ -40,7 +40,7 @@ export default function Stats({ pokemonName }) {
   }
 
   // 👇 Apply different color to the loader-div
-  function backgroundColor(skill) {
+  function skillBarColor(skill) {
     const specialSkills = ["hp", "def", "vit"];
     return specialSkills.includes(skill) ? "#D67873" : "#A7D88D";
   }
@@ -56,7 +56,7 @@ export default function Stats({ pokemonName }) {
               className={styles["skill__bar--loader"]}
               style={{
                 width: loaderLength(el.value),
-                backgroundColor: backgroundColor(el.skill),
+                backgroundColor: skillBarColor(el.skill),
               }}
             />
           </div>

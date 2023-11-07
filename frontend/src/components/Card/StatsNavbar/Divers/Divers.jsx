@@ -23,7 +23,6 @@ export default function Divers({ pokemonName }) {
       })
       .then((data) => {
         const { height, weight, sexe, egg_groups: eggGroups } = data; // 👈 How to resolve this ?
-
         setState({ height, weight, sexe, egg_groups: eggGroups }); // 👈 Crash if egg_groups empty
       })
       .catch((error) => {

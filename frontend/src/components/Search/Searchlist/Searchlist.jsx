@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import styles from "./Searchlist.module.css";
 
 export default function Searchlist({ results }) {
-  console.info(typeof results);
   // 👇 "setPokemon" must be a function // 👇 "results" must be an array
   Searchlist.propTypes = {
     results: PropTypes.objectOf.isRequired,
@@ -24,11 +23,7 @@ export default function Searchlist({ results }) {
           key={result.name.fr}
           to={`/Card/${removeAccents(result.name.fr)}`}
         >
-          <button
-            className={styles["results-list__result"]}
-            /* onClick={() => handleResult(result.name.fr)} */
-            type="button"
-          >
+          <button className={styles["results-list__result"]} type="button">
             {result.name.fr}
           </button>
         </Link>

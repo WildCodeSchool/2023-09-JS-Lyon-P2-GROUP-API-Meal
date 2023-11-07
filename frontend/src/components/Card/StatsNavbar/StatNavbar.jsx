@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Stats from "./Stats/Stats";
 import Evolution from "./Evolution/Evolution";
 import Divers from "./Divers/Divers";
@@ -10,8 +10,26 @@ function StatNavbar({ pokemonName }) {
   StatNavbar.propTypes = {
     pokemonName: PropTypes.string.isRequired,
   };
-  const [currentTab, setCurrentTab] = useState("1");
 
+  const [state, setState] = useState({ evolution: {} });
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch(
+        `https://api-pokemon-fr.vercel.app/api/v1/pokemon/${pokemonName}`
+      );
+
+      const data = await response.json();
+      const { evolution } = data;
+      setState({ evolution });
+    }
+
+    fetchData();
+  }, [pokemonName]);
+
+  const [currentTab, setCurrentTab] = useState("1"); // 👈 Display tab
+  const handleTabClick = (e) => {
+    setCurrentTab(e.target.id);
+  };
   const tabs = [
     {
       id: 1,
@@ -21,7 +39,7 @@ function StatNavbar({ pokemonName }) {
     {
       id: 2,
       tabTitle: "Evolution",
-      content: <Evolution pokemonName={pokemonName} />,
+      content: <Evolution evolution={state.evolution} />,
     },
     {
       id: 3,
@@ -29,10 +47,6 @@ function StatNavbar({ pokemonName }) {
       content: <Divers pokemonName={pokemonName} />,
     },
   ];
-
-  const handleTabClick = (e) => {
-    setCurrentTab(e.target.id);
-  };
 
   return (
     <section className={styles.container}>
@@ -60,7 +74,3 @@ function StatNavbar({ pokemonName }) {
 }
 
 export default StatNavbar;
-
-<button className={styles.navbar__btn} type="button">
-  Stats
-</button>;

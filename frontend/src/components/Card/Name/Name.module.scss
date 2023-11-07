@@ -1,0 +1,38 @@
+@import "../../../style/utils";
+
+.wrapper {
+  @include flexboxColumn;
+  padding: 1.55rem;
+  color: $fclr-white;
+  background-color: $clr-grass;
+
+  &__pokemon {
+    @include flexboxRow;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: $fw-bold;
+
+    &--name {
+      font-size: 2.5rem;
+      -webkit-text-stroke: 0.5px black;
+    }
+
+    &--id {
+      font-size: 1.55rem;
+      -webkit-text-stroke: 0.25px black;
+    }
+  }
+
+  &__type {
+    display: inline-flex;
+    width: 100%;
+    gap: 0.5em;
+
+    &--value {
+      font-size: 0.9rem;
+      padding: 0.25em 1.75em;
+      background-color: rgba(255, 255, 255, 0.25);
+      border-radius: 50px;
+    }
+  }
+}

@@ -4,10 +4,21 @@
 /* COLORS */
 /* FONTS */
 /* DISPLAY */
+/* NAVBAR */
+@import "./components/navBar/navBar.css";
+/* SEARCHBAR */
+@import "./components/Search/Search.module.css";
 @import "./components/Search/Searchbar/Searchbar.module.css";
 @import "./components/Search/Searchlist/Searchlist.module.css";
+/* HOMEPAGE */
 @import "./components/homePage/homepage.css";
-@import "./components/navBar/navBar.css";
+/* CARD */
+@import "./components/Card/Card.module.css";
+@import "./components/Card/Name/Name.module.css";
+@import "./components/Card/StatsNavbar/StatNavbar.module.css";
+@import "./components/Card/StatsNavbar/Stats/Stats.module.css";
+@import "./components/Card/StatsNavbar/Evolution/Evolution.module.css";
+@import "./components/Card/StatsNavbar/Divers/Divers.module.css";
 *,
 *::before,
 *::after {
@@ -24,3 +35,8 @@ body {
   line-height: 1.25;
   color: #232323;
 }
+
+#root {
+  width: 100%;
+  height: 100%;
+} /*# sourceMappingURL=App.css.map */

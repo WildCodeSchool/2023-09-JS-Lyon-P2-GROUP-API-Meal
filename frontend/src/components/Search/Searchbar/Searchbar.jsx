@@ -8,28 +8,26 @@ function Searchbar({ setResults }) {
     setResults: PropTypes.func.isRequired,
   };
   const [input, setInput] = useState("");
-  // 👇 accent isn't mandatory in the search bar (ex => Salameche works for Salamèche)
+  // 👇 Make the research more user-friendly (case & accent ain't needed).
   const removeAccents = (str) => {
     return str
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .toLowerCase();
+      .normalize("NFD") // 👈 returns Unicode Normalization Form.
+      .replace(/[\u0300-\u036f]/g, "") // 👈 remove accents.
+      .toLowerCase(); // 👈 lowercase.
   };
 
   const fetchData = async (value) => {
-    const res = await fetch("https://api-pokemon-fr.vercel.app/api/v1/pokemon");
     const searchTerm = removeAccents(value);
-
+    const res = await fetch("https://api-pokemon-fr.vercel.app/api/v1/pokemon");
     const data = await res.json();
     const results = data
       .filter(
-        (pokemon) => removeAccents(pokemon.name.fr).startsWith(searchTerm) // 👈 see removeAccents && search from the pokemon's name start.
+        (pokemon) => removeAccents(pokemon.name.fr).startsWith(searchTerm) // 👈 search input value in api's array (from left to right).
       )
       .sort(
         (a, b) =>
-          removeAccents(a.name.fr).localeCompare(removeAccents(b.name.fr)) // 👈 see removeAccents && sort by alphabetical order
+          removeAccents(a.name.fr).localeCompare(removeAccents(b.name.fr)) // 👈 Sort api's array output by alphabetical order.
       );
-
     setResults(results);
   };
 

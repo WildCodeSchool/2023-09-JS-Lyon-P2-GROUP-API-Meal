@@ -1,18 +1,19 @@
 import React from "react";
-import Navbar from "../navBar/nav";
+import { Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 
 function Home() {
   return (
     <>
       <Navbar />
       <div id="div-image">
-        <a href="/App">
+        <Link to="/App">
           <img
             id="homeImage"
             src="src/assets/homepicture.png"
             alt="pokemon click me "
           />
-        </a>
+        </Link>
         <h2 id="homeParagraph">
           It’s empty ! <br />
           Catch’em Now !

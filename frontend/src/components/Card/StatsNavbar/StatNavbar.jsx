@@ -6,9 +6,11 @@ import Divers from "./Divers/Divers";
 
 import styles from "./StatNavbar.module.css";
 
-function StatNavbar({ pokemonName }) {
+function StatNavbar({ pokemonName, setIsClicked, isClicked }) {
   StatNavbar.propTypes = {
     pokemonName: PropTypes.string.isRequired,
+    setIsClicked: PropTypes.func.isRequired,
+    isClicked: PropTypes.bool.isRequired,
   };
 
   const [state, setState] = useState({ evolution: {} });
@@ -29,7 +31,9 @@ function StatNavbar({ pokemonName }) {
   const [currentTab, setCurrentTab] = useState("1"); // 👈 Display tab
   const handleTabClick = (e) => {
     setCurrentTab(e.target.id);
+    setIsClicked(false);
   };
+
   const tabs = [
     {
       id: 1,
@@ -39,7 +43,9 @@ function StatNavbar({ pokemonName }) {
     {
       id: 2,
       tabTitle: "Evolution",
-      content: <Evolution evolution={state.evolution} />,
+      content: (
+        <Evolution evolution={state.evolution} pokemonName={pokemonName} />
+      ),
     },
     {
       id: 3,
@@ -49,7 +55,7 @@ function StatNavbar({ pokemonName }) {
   ];
 
   return (
-    <section className={styles.container}>
+    <section className={`${styles.container} ${isClicked && styles.isClicked}`}>
       <nav className={styles.navbar}>
         {tabs.map((tab) => (
           <button

@@ -4,30 +4,24 @@
 /* COLORS */
 /* FONTS */
 /* DISPLAY */
-.wrapper {
+.primaryNavBar {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  height: 18rem;
+  justify-content: space-between;
+  padding: 1em;
 }
-.wrapper__icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.wrapper__icon--img {
-  width: 155px;
-  aspect-ratio: 1;
-  filter: drop-shadow(rgba(0, 0, 0, 0.25) 0 5px 5px);
-}
-.wrapper p {
+.primaryNavBar .pokedexLogo {
+  font-size: 2rem;
   font-weight: 700;
-}
-.wrapper .evolution__button {
   border: none;
   background-color: transparent;
-  cursor: pointer;
-} /*# sourceMappingURL=Evolution.module.css.map */
+}
+.primaryNavBar .pokedexLogo a {
+  text-decoration: none;
+  color: #232323;
+}
+.primaryNavBar .burgerLogo {
+  width: 50px;
+  aspect-ratio: 1;
+} /*# sourceMappingURL=Navbar.module.css.map */

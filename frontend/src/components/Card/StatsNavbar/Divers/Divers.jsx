@@ -51,18 +51,28 @@ export default function Divers({ pokemonName }) {
         <tbody className={styles["wrapper__body--table"]}>
           <tr className={styles["wrapper__body--tr"]}>
             <td className={styles["wrapper__body--subtitle"]}>Genre</td>
-            <td id="male">{state.sexe.male}%</td>
-            <td id="female">{state.sexe.female}%</td>
+            {state.sexe !== null ? (
+              <>
+                <td id="male">{state.sexe.male}%</td>
+                <td id="female">{state.sexe.female}%</td>
+              </>
+            ) : (
+              <td>unknown...</td>
+            )}
           </tr>
           <tr className={styles["wrapper__body--tr"]}>
             <td id="egg_logo" className={styles["wrapper__body--subtitle"]}>
               Oeuf
             </td>
-            {state.egg_groups.map((el) => (
-              <td key={el} className="egg">
-                {el}
-              </td>
-            ))}
+            {state.egg_groups !== null ? (
+              state.egg_groups.map((el) => (
+                <td key={el} className="egg">
+                  {el}
+                </td>
+              ))
+            ) : (
+              <td>unknown...</td>
+            )}
           </tr>
         </tbody>
       </table>

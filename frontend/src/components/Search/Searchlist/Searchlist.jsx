@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import styles from "./Searchlist.module.css";
 
 export default function Searchlist({ results }) {
-  // 👇 "setPokemon" must be a function // 👇 "results" must be an array
   Searchlist.propTypes = {
-    results: PropTypes.objectOf.isRequired,
+    results: PropTypes.arrayOf.isRequired,
   };
+
   // 👇 Make the research more user-friendly (case & accent ain't needed).
   const removeAccents = (str) => {
     return str

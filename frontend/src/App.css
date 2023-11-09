@@ -11,13 +11,8 @@
 @import "./components/Search/Searchbar/Searchbar.module.css";
 @import "./components/Search/Searchlist/Searchlist.module.css";
 /* HOMEPAGE */
-@import "./components/HomePage/Homepage.css";
-/* Navbar*/
-@import "./components/Navbar/Navbar.css";
-/* Typespokemond Cards styles*/
+@import "./components/homePage/homepage.css";
 @import "./components/Typespokemon/Typescard.css";
-/* pokemonfiltre par type page */
-@import "./components/Pokemonfiltre/Pokemonfiltre.css";
 /* CARD */
 @import "./components/Card/Card.module.css";
 @import "./components/Card/Name/Name.module.css";

@@ -26,7 +26,7 @@
   grid-template-columns: repeat(2, 1fr);
   width: auto;
   height: auto;
-  margin-top: 5%;
+  margin: 0.5em auto;
   overflow: scroll;
 }
 
@@ -35,10 +35,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
+  margin: 0.5em auto;
   padding-bottom: 1rem;
-  margin-left: 15%;
-  margin-top: 1rem;
+  margin: 0.5em auto;
   width: 11rem;
   height: 10rem;
   border-radius: 20px;

@@ -12,7 +12,9 @@
 @import "./components/Search/Searchlist/Searchlist.module.css";
 /* HOMEPAGE */
 @import "./components/homePage/homepage.css";
+/* Pokemon type*/
 @import "./components/Typespokemon/Typescard.css";
+/* Pokemon filtre composant*/
 @import "./components/Pokemonfiltre/Pokemonfiltre.css";
 /* CARD */
 @import "./components/Card/Card.module.css";
@@ -21,6 +23,7 @@
 @import "./components/Card/StatsNavbar/Stats/Stats.module.css";
 @import "./components/Card/StatsNavbar/Evolution/Evolution.module.css";
 @import "./components/Card/StatsNavbar/Divers/Divers.module.css";
+
 *,
 *::before,
 *::after {

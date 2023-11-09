@@ -1,0 +1,99 @@
+:root {
+  --water-color: #9db7f5;
+  --steal-color: #d1d1e0;
+  --rock-color: #d1c17d;
+  --psychic-color: #f192b2;
+  --poison-color: #c183c1;
+  --normal-color: #c6c6a7;
+
+  --ice-color: #bce6e6;
+  --ground-color: #ebd69d;
+  --grass-color: #a7d88d;
+  --ghost-color: #a292bc;
+  --flying-color: #a890f0;
+  --fire-color: #f5ac78;
+
+  --fighting-color: #d67873;
+  --fairy-color: #f4bdc9;
+  --electric-color: #fae078;
+  --dragon-color: #a27dfa;
+  --dark-color: #a29288;
+  --bug-color: #c6d16e;
+}
+
+.display-pokemon {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: auto;
+  height: auto;
+  margin-top: 5%;
+  overflow: scroll;
+}
+
+.pokeCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-left: 15%;
+  margin-top: 1rem;
+  width: 10rem;
+  height: 9rem;
+  border-radius: 20px;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.pokeCard a {
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* les images */
+.pokeCard .poke {
+  width: 7rem;
+  height: 7rem;
+  margin-top: 10%;
+  filter: brightness(0) invert(100);
+}
+
+/* les noms */
+.pokeCard p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  color: black;
+  font-weight: bolder;
+  margin: 0px 0px 1rem 0px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 750px) {
+  .display-pokemon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding-left: 2%;
+  }
+}
+@media screen and (min-width: 750px) and (max-width: 900px) {
+  .display-pokemon {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding-left: 2%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .display-pokemon {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding-left: 2%;
+  }
+}

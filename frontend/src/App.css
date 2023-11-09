@@ -11,7 +11,11 @@
 @import "./components/Search/Searchbar/Searchbar.module.css";
 @import "./components/Search/Searchlist/Searchlist.module.css";
 /* HOMEPAGE */
-@import "./components/homePage/homepage.css";
+@import "./components/HomePage/Homepage.css";
+/* Navbar*/
+@import "./components/Navbar/Navbar.css";
+/* Typespokemond Cards styles*/
+@import "./components/Typespokemon/Typescard.css";
 /* CARD */
 @import "./components/Card/Card.module.css";
 @import "./components/Card/Name/Name.module.css";
@@ -28,7 +32,7 @@
 }
 
 body {
-  overflow: hidden;
+  overflow: auto;
   height: 100vh;
   font-family: "Roboto", "Cabin condensed", "Cambay", system-ui;
   font-weight: 400;

@@ -16,6 +16,8 @@
 @import "./components/Navbar/Navbar.css";
 /* Typespokemond Cards styles*/
 @import "./components/Typespokemon/Typescard.css";
+/* pokemonfiltre par type page */
+@import "./components/Pokemonfiltre/Pokemonfiltre.css";
 /* CARD */
 @import "./components/Card/Card.module.css";
 @import "./components/Card/Name/Name.module.css";

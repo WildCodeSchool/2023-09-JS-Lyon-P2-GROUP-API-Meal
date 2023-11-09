@@ -13,7 +13,6 @@ export default function Hero({ pokemonName, setIsClicked, isClicked }) {
 
   function handleClick() {
     setIsClicked(!isClicked);
-    console.info(isClicked);
   }
 
   useEffect(() => {
@@ -28,7 +27,7 @@ export default function Hero({ pokemonName, setIsClicked, isClicked }) {
   }, [pokemonName]);
 
   return (
-    <button type="button" onClick={handleClick} onKeyDown={handleClick}>
+    <button type="button" onClick={handleClick}>
       <img
         className={`${styles.heroPicture} ${isClicked && styles.isClicked}`}
         src={heroPicture.regular}

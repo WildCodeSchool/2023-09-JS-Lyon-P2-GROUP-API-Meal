@@ -9,6 +9,23 @@
   bottom: 0;
   background-color: white;
   transition: all 0.2s;
+
+  .arrow {
+    position: absolute;
+    display: block;
+    background-color: $fclr-white;
+    border-radius: 50%;
+    border: none;
+    padding: 1em;
+    width: 70px;
+    height: 70px;
+    left: 50%;
+    transform: translate(-50%, -35%);
+
+    & * {
+      pointer-events: none;
+    }
+  }
 }
 
 .navbar {

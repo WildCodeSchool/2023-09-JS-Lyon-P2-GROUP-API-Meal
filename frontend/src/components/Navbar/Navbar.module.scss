@@ -5,16 +5,13 @@
   justify-content: space-between;
   padding: 1em;
 
-  .pokedexLogo {
+  a {
+    text-decoration: none;
+    color: $fclr-black;
     font-size: 2rem;
     font-weight: $fw-bold;
     border: none;
     background-color: transparent;
-
-    a {
-      text-decoration: none;
-      color: $fclr-black;
-    }
   }
 
   .burgerLogo {

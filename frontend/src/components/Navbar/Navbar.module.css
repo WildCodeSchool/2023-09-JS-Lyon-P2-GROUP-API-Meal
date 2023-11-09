@@ -4,6 +4,7 @@
 /* COLORS */
 /* FONTS */
 /* DISPLAY */
+
 .primaryNavBar {
   display: flex;
   justify-content: center;
@@ -23,5 +24,4 @@
 }
 .primaryNavBar .burgerLogo {
   width: 50px;
-  aspect-ratio: 1;
-} /*# sourceMappingURL=Navbar.module.css.map */
+}

@@ -7,13 +7,11 @@ import Card from "./components/Card/Card";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <Router>
-      <Routes>
-        <Route path="/Home" element={<Home />} />
-        <Route path="/App" element={<App />} />
-        <Route path="/Card/:pokemonName" element={<Card />} />
-      </Routes>
-    </Router>
-  </React.StrictMode>
+  <Router>
+    <Routes>
+      <Route path="/Home" element={<Home />} />
+      <Route path="/App" element={<App />} />
+      <Route path="/Card/:pokemonName" element={<Card />} />
+    </Routes>
+  </Router>
 );

@@ -1,19 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styles from "./Navbar.module.css";
 
 function Navbar() {
   return (
-    <nav className="nav-bar">
-      <Link to="/App">
-        <div id="nav-pokedex">Pokedex</div>
-      </Link>
-      <div id="logo">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="24"
-          viewBox="0 -960 960 960"
-          width="24"
-        >
+    <nav className={styles.primaryNavBar}>
+      <button className={styles.pokedexLogo} type="button">
+        <Link to="/App">Pokedex</Link>
+      </button>
+
+      <div className={styles.burgerLogo}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
           <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
         </svg>
       </div>

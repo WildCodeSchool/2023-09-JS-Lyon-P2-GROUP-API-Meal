@@ -14,10 +14,10 @@
   --feu-color: #f5ac78;
 
   --combat-color: #d67873;
-  --fée-color: #f4bdc9;
-  --électrik-color: #fae078;
+  --fee-color: #f4bdc9;
+  --electrik-color: #fae078;
   --dragon-color: #a27dfa;
-  --ténèbres-color: #a29288;
+  --tenebres-color: #a29288;
   --insecte-color: #c6d16e;
 }
 
@@ -63,7 +63,7 @@
   font-family: Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
   text-align: center;
-  color: black;
+  color: white;
   font-weight: 900;
   margin: 0px 0px 1rem 0px;
 }

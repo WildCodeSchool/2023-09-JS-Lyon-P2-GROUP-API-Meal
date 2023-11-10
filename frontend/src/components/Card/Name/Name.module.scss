@@ -1,0 +1,41 @@
+@import "../../../style/utils";
+
+.wrapper {
+  @include flexboxColumn;
+  padding: 1.55rem;
+  color: $fclr-white;
+
+  &__pokemon {
+    @include flexboxRow;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: $fw-bold;
+
+    &--name {
+      font-size: 2.5rem;
+      -webkit-text-stroke: 0.5px black;
+      filter: drop-shadow(rgba(0, 0, 0, 0.75) 0 5px 25px);
+    }
+
+    &--id {
+      font-size: 1.55rem;
+      -webkit-text-stroke: 0.25px black;
+      color: $fclr-white;
+    }
+  }
+
+  &__type {
+    display: inline-flex;
+    width: 100%;
+    gap: 0.5em;
+    z-index: 10;
+    filter: drop-shadow(rgba(0, 0, 0, 0.75) 0 5px 25px);
+
+    &--value {
+      font-size: 0.9rem;
+      padding: 0.25em 1.75em;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50px;
+    }
+  }
+}

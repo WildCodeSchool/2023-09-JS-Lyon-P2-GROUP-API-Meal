@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Search from "./components/Search/Search";
-import Navbar from "./components/navBar/nav";
+import Navbar from "./components/Navbar/Navbar";
+import Typespokemon from "./components/Typespokemon/Typespokemon";
 import "./App.css";
 
 function App() {
@@ -8,8 +9,11 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      <Search setPokemon={setPokemon} pokemon={pokemon} />
+      <section>
+        <Navbar />
+        <Search setPokemon={setPokemon} pokemon={pokemon} />
+      </section>
+      <Typespokemon />
     </div>
   );
 }

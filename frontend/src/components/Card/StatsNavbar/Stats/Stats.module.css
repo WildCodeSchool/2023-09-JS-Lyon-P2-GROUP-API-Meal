@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&display=swap");
+/* COLORS */
+/* FONTS */
+/* DISPLAY */
+@keyframes progress {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+.wrapper {
+  margin-top: 1.5rem;
+}
+
+.skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.45em;
+}
+.skill__name,
+.skill__value {
+  font-size: 1.125rem;
+  flex: 1;
+  text-transform: uppercase;
+}
+.skill__value {
+  text-align: center;
+}
+.skill__bar {
+  width: 50%;
+  height: 5px;
+}
+.skill__bar--loader {
+  height: 100%;
+  border-radius: 10px;
+  background-color: #a7d88d;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: progress 1s ease-in-out forwards;
+} /*# sourceMappingURL=Stats.module.css.map */

@@ -1,17 +1,29 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { createRoot } from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
-import Home from "./components/homePage/homepage";
+import Home from "./components/Homepage/Homepage";
+import Card from "./components/Card/Card";
+import Pokemonfiltre from "./components/Pokemonfiltre/Pokemonfiltre";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/App" element={<App />} />
-      </Routes>
-    </Router>
-  </React.StrictMode>
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/App",
+    element: <App />,
+  },
+  {
+    path: "/Card/:pokemonName",
+    element: <Card />,
+  },
+  {
+    path: "Pokemonfiltre",
+    element: <Pokemonfiltre />,
+  },
+]);
+createRoot(document.getElementById("root")).render(
+  <RouterProvider router={router} />
 );

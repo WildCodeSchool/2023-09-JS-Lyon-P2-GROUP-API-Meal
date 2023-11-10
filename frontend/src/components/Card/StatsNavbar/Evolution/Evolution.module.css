@@ -4,26 +4,30 @@
 /* COLORS */
 /* FONTS */
 /* DISPLAY */
-.results-list {
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 18rem;
+}
+.wrapper__icon {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  z-index: 1;
-  cursor: pointer;
-  width: 100%;
-  margin-top: 1rem;
-  border-radius: 25px;
-  background-color: rgba(0, 0, 0, 0.5);
 }
-.results-list__result {
-  padding: 0.25em;
-  text-align: center;
-  background-color: transparent;
+.wrapper__icon--img {
+  width: 155px;
+  aspect-ratio: 1;
+  filter: drop-shadow(rgba(0, 0, 0, 0.25) 0 5px 5px);
+}
+.wrapper p {
+  font-weight: 700;
+}
+.wrapper .evolution__button {
   border: none;
-  font-family: "Cabin condensed";
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: whitesmoke;
-} /*# sourceMappingURL=Searchlist.module.css.map */
+  background-color: transparent;
+  cursor: pointer;
+} /*# sourceMappingURL=Evolution.module.css.map */

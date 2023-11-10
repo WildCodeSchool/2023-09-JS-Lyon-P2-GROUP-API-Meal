@@ -1,7 +1,21 @@
 @import "./style/utils";
+/* NAVBAR */
+@import "./components/Navbar/Navbar.module.css";
+/* SEARCHBAR */
+@import "./components/Search/Search.module.css";
 @import "./components/Search/Searchbar/Searchbar.module.css";
 @import "./components/Search/Searchlist/Searchlist.module.css";
+/* HOMEPAGE */
 @import "./components/homePage/homepage.css";
+@import "./components/Typespokemon/Typescard.css";
+@import "./components/Pokemonfiltre/Pokemonfiltre.css";
+/* CARD */
+@import "./components/Card/Card.module.css";
+@import "./components/Card/Name/Name.module.css";
+@import "./components/Card/StatsNavbar/StatNavbar.module.css";
+@import "./components/Card/StatsNavbar/Stats/Stats.module.css";
+@import "./components/Card/StatsNavbar/Evolution/Evolution.module.css";
+@import "./components/Card/StatsNavbar/Divers/Divers.module.css";
 
 *,
 *::before,
@@ -10,7 +24,7 @@
 }
 
 body {
-  overflow: hidden;
+  overflow: auto;
   height: 100vh;
   font-family: $ff-primary, $ff-secondary, $ff-tertiary, $ff-system_ui;
   font-weight: $fw-regular;
@@ -18,19 +32,7 @@ body {
   color: $fclr-black;
 }
 
-/* -------------------------nav bar -------------------------------------*/
-.nav-bar {
-  @include flexboxRow;
-  justify-content: space-between;
-  padding: 0 1rem;
-  margin: 1rem 0 2rem 0;
-}
-
-#nav-pokedex {
-  font: $fw-bold 2rem $ff-primary;
-}
-
-#logo img {
-  width: 35px;
-  height: 35px;
+#root {
+  width: 100%;
+  height: 100%;
 }

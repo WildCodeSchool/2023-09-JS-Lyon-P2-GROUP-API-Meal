@@ -16,7 +16,7 @@ function PokemonFiltreCards() {
   }, []);
 
   useEffect(() => {
-    // la recupération les données depuis un composant //
+    // la recupération des données depuis un composant //
 
     const urlParams = new URLSearchParams(window.location.search);
     const filtrePokemonTypes = urlParams.get("filtrePokemonTypes");

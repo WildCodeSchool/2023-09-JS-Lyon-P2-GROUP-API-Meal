@@ -30,7 +30,6 @@
 }
 
 body {
-  overflow: auto;
   height: 100vh;
   font-family: "Roboto", "Cabin condensed", "Cambay", system-ui;
   font-weight: 400;

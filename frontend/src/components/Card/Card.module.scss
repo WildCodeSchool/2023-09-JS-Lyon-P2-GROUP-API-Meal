@@ -1,7 +1,55 @@
 @import "../../style/utils";
 
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
 .container {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+
+  .pokeball {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.25;
+    top: 20%;
+    left: 30%;
+
+    &__svg {
+      animation: rotate 17500ms normal linear infinite;
+    }
+  }
+}
+
+@include keyframes(rotate) {
+  0% {
+    transform: rotate3d(0, 0, 1, 0deg) scale(1.25);
+  }
+  25% {
+    transform: rotate3d(0, 0, 1, 90deg) scale(1.5);
+  }
+  50% {
+    transform: rotate3d(0, 0, 1, 180deg) scale(1.75);
+  }
+  75% {
+    transform: rotate3d(0, 0, 1, 270deg) scale(1.5);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg) scale(1.25);
+  }
 }

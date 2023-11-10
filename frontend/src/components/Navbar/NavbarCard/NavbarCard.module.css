@@ -18,8 +18,25 @@
   font-weight: 700;
   border: none;
   background-color: transparent;
+  width: 35px;
+  aspect-ratio: 1;
 }
-.primaryNavBar .burgerLogo {
+.primaryNavBar .pokeballLogo {
   width: 50px;
   aspect-ratio: 1;
-} /*# sourceMappingURL=Navbar.module.css.map */
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.primaryNavBar .pokeballLogo * {
+  pointer-events: none;
+}
+.primaryNavBar svg {
+  vertical-align: middle;
+}
+.primaryNavBar .isntFavorite {
+  filter: grayscale(100%);
+}
+.primaryNavBar .isFavorite {
+  filter: grayscale(0) contrast(120%);
+} /*# sourceMappingURL=NavbarCard.module.css.map */

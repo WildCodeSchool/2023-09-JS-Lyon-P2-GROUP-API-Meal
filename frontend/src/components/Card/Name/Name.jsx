@@ -34,7 +34,6 @@ export default function Name({ pokemonName }) {
     }
     fetchData();
   }, [pokemonName]);
-
   return (
     <section className={styles.wrapper}>
       <div className={styles.wrapper__pokemon}>

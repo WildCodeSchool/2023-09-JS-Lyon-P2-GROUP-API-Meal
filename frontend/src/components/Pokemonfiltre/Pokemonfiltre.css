@@ -24,7 +24,7 @@
 .display-pokemon {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: auto;
+  width: clamp(375px, 100%, 1440px);
   height: auto;
   margin: 0.5em auto;
   overflow: scroll;

@@ -17,6 +17,8 @@
 }
 .container .pokeball__svg {
   animation: rotate 17500ms normal linear infinite;
+  position: fixed;
+  pointer-events: none;
 }
 @keyframes rotate {
   0% {
@@ -34,4 +36,4 @@
   100% {
     transform: rotate3d(0, 0, 1, 360deg) scale(1.25);
   }
-} /*# sourceMappingURL=Card.module.css.map */
+}

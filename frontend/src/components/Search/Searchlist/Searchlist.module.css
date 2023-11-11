@@ -13,7 +13,6 @@
   z-index: 1;
   cursor: pointer;
   width: 100%;
-  margin-top: 1rem;
   border-radius: 25px;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -26,4 +25,4 @@
   font-weight: 600;
   font-size: 1.5rem;
   color: whitesmoke;
-} /*# sourceMappingURL=Searchlist.module.css.map */
+}

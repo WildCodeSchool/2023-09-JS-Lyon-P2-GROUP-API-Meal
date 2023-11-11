@@ -31,6 +31,8 @@
 
     &__svg {
       animation: rotate 17500ms normal linear infinite;
+      position: fixed;
+      pointer-events: none;
     }
   }
 }

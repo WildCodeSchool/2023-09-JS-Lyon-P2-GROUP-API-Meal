@@ -17,6 +17,8 @@
 @import "./components/Card/StatsNavbar/Evolution/Evolution.module.css";
 @import "./components/Card/StatsNavbar/Divers/Divers.module.css";
 
+$navigationHeight: 10rem;
+
 *,
 *::before,
 *::after {
@@ -25,6 +27,7 @@
 
 body {
   height: 100vh;
+  background-color: $fclr-white;
   font-family: $ff-primary, $ff-secondary, $ff-tertiary, $ff-system_ui;
   font-weight: $fw-regular;
   line-height: $line-height;
@@ -34,4 +37,16 @@ body {
 #root {
   width: 100%;
   height: 100%;
+}
+
+.navigation {
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  background-color: $fclr-white;
+  height: $navigationHeight;
+}
+
+.appBody {
+  padding-top: $navigationHeight;
 }

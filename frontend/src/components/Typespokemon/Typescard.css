@@ -33,10 +33,11 @@
   justify-content: center;
   align-items: center;
   margin: 0.5em auto;
-  width: 12rem;
+  width: 11rem;
   height: 10rem;
   border-style: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .pokeCard * {

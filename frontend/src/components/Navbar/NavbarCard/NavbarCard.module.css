@@ -28,9 +28,6 @@
   background-color: transparent;
   cursor: pointer;
 }
-.primaryNavBar .pokeballLogo * {
-  pointer-events: none;
-}
 .primaryNavBar svg {
   vertical-align: middle;
 }
@@ -39,4 +36,4 @@
 }
 .primaryNavBar .isFavorite {
   filter: grayscale(0) contrast(120%);
-} /*# sourceMappingURL=NavbarCard.module.css.map */
+}

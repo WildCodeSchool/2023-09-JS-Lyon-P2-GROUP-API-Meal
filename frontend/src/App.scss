@@ -54,5 +54,5 @@ body {
 }
 
 .appBody {
-  padding-top: $navigationHeight;
+  padding-top: calc($navigationHeight + 1em);
 }

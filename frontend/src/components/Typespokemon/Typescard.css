@@ -67,7 +67,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    padding-left: 2%;
   }
 }
 @media screen and (min-width: 750px) and (max-width: 900px) {
@@ -75,14 +74,12 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    padding-left: 2%;
   }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
   .display-pokemon {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
-    padding-left: 2%;
   }
 }

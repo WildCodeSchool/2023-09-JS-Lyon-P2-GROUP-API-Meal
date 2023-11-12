@@ -16,7 +16,7 @@ export default function Card() {
   useEffect(() => {
     async function fetchType() {
       const response = await fetch(
-        `https://api-pokemon-fr.vercel.app/api/v1/pokemon/${pokemonName}`
+        `https://tyradex.vercel.app/api/v1/pokemon/${pokemonName}`
       );
       const { types } = await response.json();
       setCurrentType(types[0].name);

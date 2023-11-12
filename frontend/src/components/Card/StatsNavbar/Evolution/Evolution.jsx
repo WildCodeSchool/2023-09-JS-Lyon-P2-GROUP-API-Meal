@@ -12,7 +12,7 @@ export default function Evolution({ evolution, pokemonName }) {
 
   async function getSprites(name) {
     const response = await fetch(
-      `https://api-pokemon-fr.vercel.app/api/v1/pokemon/${name}`
+      `https://tyradex.vercel.app/api/v1/pokemon/${name}`
     );
     const { sprites } = await response.json();
     return sprites.regular;

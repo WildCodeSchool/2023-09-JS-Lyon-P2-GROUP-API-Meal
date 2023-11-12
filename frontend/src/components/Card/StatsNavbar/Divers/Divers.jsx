@@ -14,7 +14,7 @@ export default function Divers({ pokemonName }) {
     egg_groups: [],
   });
   useEffect(() => {
-    fetch(`https://api-pokemon-fr.vercel.app/api/v1/pokemon/${pokemonName}`)
+    fetch(`https://tyradex.vercel.app/api/v1/pokemon/${pokemonName}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);

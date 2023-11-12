@@ -15,7 +15,7 @@ export default function Stats({ pokemonName }) {
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
-        `https://api-pokemon-fr.vercel.app/api/v1/pokemon/${pokemonName}`
+        `https://tyradex.vercel.app/api/v1/pokemon/${pokemonName}`
       );
 
       const data = await response.json();

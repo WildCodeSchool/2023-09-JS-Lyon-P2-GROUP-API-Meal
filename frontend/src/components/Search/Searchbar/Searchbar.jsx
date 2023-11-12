@@ -18,7 +18,7 @@ function Searchbar({ setResults }) {
 
   const fetchData = async (value) => {
     const searchTerm = removeAccents(value);
-    const res = await fetch("https://api-pokemon-fr.vercel.app/api/v1/pokemon");
+    const res = await fetch("https://tyradex.vercel.app/api/v1/pokemon");
     const data = await res.json();
     const results = data
       .filter(

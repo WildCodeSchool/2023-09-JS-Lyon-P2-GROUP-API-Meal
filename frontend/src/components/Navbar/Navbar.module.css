@@ -1,15 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&display=swap");
-/* COLORS */
-/* FONTS */
-/* DISPLAY */
-
 .primaryNavBar {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   padding: 1em;
 }
 .primaryNavBar a {
@@ -22,4 +19,5 @@
 }
 .primaryNavBar .burgerLogo {
   width: 50px;
+  aspect-ratio: 1;
 }

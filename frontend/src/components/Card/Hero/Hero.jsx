@@ -18,7 +18,7 @@ export default function Hero({ pokemonName, setIsClicked, isClicked }) {
   useEffect(() => {
     async function fetchHero() {
       const response = await fetch(
-        `https://tyradex.vercel.app/api/v1/pokemon/${pokemonName}`
+        `https://tyradex.tech/api/v1/pokemon/${pokemonName}`
       );
       const { sprites } = await response.json();
       setHeroPicture(sprites);

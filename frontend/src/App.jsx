@@ -9,11 +9,13 @@ function App() {
 
   return (
     <div className="App">
-      <section>
+      <section className="navigation">
         <Navbar />
         <Search setPokemon={setPokemon} pokemon={pokemon} />
       </section>
-      <Typespokemon />
+      <section className="appBody">
+        <Typespokemon />
+      </section>
     </div>
   );
 }

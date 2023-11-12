@@ -1,11 +1,7 @@
 import TypesCard from "./Typescards";
 
 function Typespokemon() {
-  return (
-    <div className="App">
-      <TypesCard />
-    </div>
-  );
+  return <TypesCard />;
 }
 
 export default Typespokemon;

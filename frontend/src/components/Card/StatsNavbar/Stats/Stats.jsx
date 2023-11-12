@@ -15,7 +15,7 @@ export default function Stats({ pokemonName }) {
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
-        `https://api-pokemon-fr.vercel.app/api/v1/pokemon/${pokemonName}`
+        `https://tyradex.tech/api/v1/pokemon/${pokemonName}`
       );
 
       const data = await response.json();
@@ -36,7 +36,7 @@ export default function Stats({ pokemonName }) {
 
   // 👇 Computes the loader-div lenght relative to the maximum value of 150 and the actual skill's value of the pokemon.
   function loaderLength(value) {
-    return `${(value * 100) / 150}%`;
+    return `${(value * 100) / 250}%`;
   }
 
   // 👇 Apply different color to the loader-div

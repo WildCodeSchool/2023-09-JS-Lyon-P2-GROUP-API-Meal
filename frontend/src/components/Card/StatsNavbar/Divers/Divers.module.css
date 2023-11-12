@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&display=swap");
-/* COLORS */
-/* FONTS */
-/* DISPLAY */
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -86,4 +83,4 @@
   filter: invert(72%) sepia(25%) saturate(516%) hue-rotate(11deg)
     brightness(101%) contrast(93%);
   vertical-align: -30%;
-} /*# sourceMappingURL=Divers.module.css.map */
+}

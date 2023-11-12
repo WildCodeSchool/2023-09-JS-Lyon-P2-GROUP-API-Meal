@@ -1,5 +1,11 @@
 import { React, useEffect, useState } from "react";
 
+const normalizeString = (sansAccent) => {
+  return sansAccent
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+};
 function PokemonFiltreCards() {
   const [pokemonType, setPokemonType] = useState(null);
   const [filteredPokemon, setFilteredPokemon] = useState(null);
@@ -33,7 +39,15 @@ function PokemonFiltreCards() {
     <div className="display-pokemon">
       {filteredPokemon !== null
         ? filteredPokemon.map((pokemon) => (
-            <div className="pokeTypeCard" key={pokemon.pokedexId}>
+            <div
+              className="pokeTypeCard"
+              key={pokemon.pokedexId}
+              style={{
+                backgroundColor: `var(--${normalizeString(
+                  pokemon.types[0].name
+                )}-color)`,
+              }}
+            >
               <img
                 className="pokeType"
                 src={pokemon.sprites.regular}

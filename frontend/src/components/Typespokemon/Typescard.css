@@ -24,9 +24,6 @@
 .display-pokemon {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: auto;
-  height: auto;
-  margin-top: 5%;
   overflow: scroll;
 }
 
@@ -39,11 +36,8 @@
   width: 11rem;
   height: 10rem;
   border-style: none;
-  border-radius: 20px;
-  box-shadow:
-    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .pokeCard * {
@@ -73,7 +67,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    padding-left: 2%;
   }
 }
 @media screen and (min-width: 750px) and (max-width: 900px) {
@@ -81,14 +74,12 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    padding-left: 2%;
   }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
   .display-pokemon {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
-    padding-left: 2%;
   }
 }

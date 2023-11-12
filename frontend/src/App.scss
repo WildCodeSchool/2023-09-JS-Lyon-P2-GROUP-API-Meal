@@ -17,6 +17,8 @@
 @import "./components/Card/StatsNavbar/Evolution/Evolution.module.css";
 @import "./components/Card/StatsNavbar/Divers/Divers.module.css";
 
+$navigationHeight: 10rem;
+
 *,
 *::before,
 *::after {
@@ -24,8 +26,8 @@
 }
 
 body {
-  overflow: auto;
   height: 100vh;
+  background-color: $fclr-white;
   font-family: $ff-primary, $ff-secondary, $ff-tertiary, $ff-system_ui;
   font-weight: $fw-regular;
   line-height: $line-height;
@@ -35,4 +37,22 @@ body {
 #root {
   width: 100%;
   height: 100%;
+}
+
+.navigation {
+  @include flexboxColumn;
+  justify-content: space-between;
+  position: fixed;
+  border-radius: 0 0 50px 50px;
+  z-index: 99999;
+  width: clamp(375px, 100%, 1440px);
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background-color: $fclr-white;
+  height: $navigationHeight;
+  filter: drop-shadow(rgba(0, 0, 0, 0.5) 0 3px 10px);
+}
+
+.appBody {
+  padding-top: calc($navigationHeight + 1em);
 }

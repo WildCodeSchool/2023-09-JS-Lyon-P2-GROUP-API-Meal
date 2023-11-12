@@ -13,7 +13,7 @@ function PokemonFiltreCards() {
 
   useEffect(() => {
     async function getType() {
-      const data = await fetch("https://tyradex.vercel.app/api/v1/pokemon");
+      const data = await fetch("https://tyradex.tech/api/v1/pokemon");
       const res = await data.json();
       setPokemonType(res);
     }

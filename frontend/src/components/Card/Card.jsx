@@ -15,7 +15,9 @@ export default function Card() {
 
   useEffect(() => {
     async function fetchType() {
-      const response = await fetch(`https://tyradex.tech/api/v1/pokemon/${pokemonName}`);
+      const response = await fetch(
+        `https://tyradex.tech/api/v1/pokemon/${pokemonName}`
+      );
       const { types } = await response.json();
       setCurrentType(types[0].name);
     }

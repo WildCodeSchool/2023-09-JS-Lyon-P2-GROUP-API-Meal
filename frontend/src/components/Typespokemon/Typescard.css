@@ -48,7 +48,7 @@
 /* les images */
 .pokeCard .poke {
   width: 7rem;
-  height: 7rem;
+  aspect-ratio: 1;
   margin-top: 10%;
   filter: brightness(0) invert(100);
 }

@@ -31,6 +31,7 @@ $ff-primary: "Roboto";
 $ff-secondary: "Cabin condensed";
 $ff-default: system-ui;
 $fw-regular: 400; // Cabin condensed
+$fw-semibold: 600; // Cabin condensed
 $fw-bold: 700; // Roboto
 
 $line-height: 1.25;
@@ -89,8 +90,9 @@ $line-height: 1.25;
   a,
   button,
   div,
-  td {
+  td,
+  small {
     font-family: $ff-secondary;
-    font-weight: $fw-regular;
+    font-weight: $fw-semibold;
   }
 }

@@ -26,6 +26,13 @@
     url("./style/fonts/secondary-regular.woff2") format("woff2"),
     url("./style/fonts/secondary-regular.woff") format("woff");
 }
+@font-face {
+  font-family: "Cabin condensed";
+  font-weight: 600;
+  src:
+    url("./style/fonts/secondary-semibold.woff2") format("woff2"),
+    url("./style/fonts/secondary-semibold.woff") format("woff");
+}
 *,
 *::before,
 *::after {
@@ -63,9 +70,10 @@ span,
 a,
 button,
 div,
-td {
+td,
+small {
   font-family: "Cabin condensed";
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .navigation {

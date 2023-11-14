@@ -5,6 +5,8 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   height: 18rem;
+  overflow-y: scroll;
+  margin-top: 1rem;
 
   &__icon {
     @include flexboxColumn;
@@ -13,6 +15,11 @@
       @include pokemonSizeSmall;
       filter: drop-shadow(rgba(0, 0, 0, 0.25) 0 5px 5px);
     }
+  }
+
+  &__name {
+    font-size: 1.25rem;
+    margin-bottom: 0;
   }
 
   .evolution__button {

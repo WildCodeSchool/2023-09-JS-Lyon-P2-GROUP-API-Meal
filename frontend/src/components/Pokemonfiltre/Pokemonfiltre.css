@@ -47,6 +47,7 @@
     rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
     rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   border-style: hidden;
+  text-decoration: none;
 }
 .pokeTypeCard * {
   pointer-events: none;
@@ -61,11 +62,11 @@
 
 /* les noms */
 .pokemon-name {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
   text-align: center;
   color: black;
-  font-weight: bolder;
+  font-weight: 900;
   margin: 0px 0px 1rem 0px;
 }
 

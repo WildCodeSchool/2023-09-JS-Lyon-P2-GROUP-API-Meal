@@ -1,36 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&display=swap");
-.primaryNavBar {
+.secondaryNavBar {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
   padding: 1em;
 }
-.primaryNavBar a {
+.secondaryNavBar a {
   text-decoration: none;
   color: #232323;
   font-size: 2rem;
-  font-weight: 700;
   border: none;
   background-color: transparent;
   width: 35px;
   aspect-ratio: 1;
 }
-.primaryNavBar .pokeballLogo {
+.secondaryNavBar .pokeballLogo {
   width: 50px;
   aspect-ratio: 1;
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
-.primaryNavBar svg {
+.secondaryNavBar svg {
   vertical-align: middle;
 }
-.primaryNavBar .isntFavorite {
+.secondaryNavBar .isntFavorite {
   filter: grayscale(100%);
 }
-.primaryNavBar .isFavorite {
+.secondaryNavBar .isFavorite {
   filter: grayscale(0) contrast(120%);
 }

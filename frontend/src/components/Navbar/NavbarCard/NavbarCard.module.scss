@@ -1,6 +1,6 @@
 @import "../../../style/utils";
 
-.primaryNavBar {
+.secondaryNavBar {
   @include flexboxRow;
   justify-content: space-between;
   padding: 1em;
@@ -9,7 +9,6 @@
     text-decoration: none;
     color: $fclr-black;
     font-size: 2rem;
-    font-weight: $fw-bold;
     border: none;
     background-color: transparent;
     width: 35px;

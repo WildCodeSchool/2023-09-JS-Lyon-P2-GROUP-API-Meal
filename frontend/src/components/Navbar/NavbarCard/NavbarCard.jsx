@@ -1,33 +1,24 @@
 import React, { useState } from "react";
-/* import PropTypes from "prop-types"; */
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-/* import toast, { Toaster } from "react-hot-toast"; */
+import { toast, Toaster } from "react-hot-toast";
 import styles from "./NavbarCard.module.css";
 
-function NavbarCard() {
-  /* add pokemonName prop 👆 */
-  /* NavbarCard.propTypes = {
-    pokemonName: PropTypes.string.isRequired,
-  }; */
-
+function NavbarCard({ pokemonName }) {
+  NavbarCard.propTypes = { pokemonName: PropTypes.string.isRequired };
   const [isntFavorite, setFavorite] = useState(false);
-
-  /* function capitalize(name) {
-    const str = name;
-    const capitalizedName = str.charAt(0).toUpperCase() + str.slice(1);
+  function capitalize(name) {
+    const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
     return capitalizedName;
-  } */
+  }
+
+  const name = capitalize(pokemonName);
 
   function handleFavorite() {
     setFavorite(!isntFavorite);
-    /* 
     return isntFavorite
-      ? toast.error(
-          `Vous avez retiré ${capitalize(pokemonName)} de votre pokedex ! `
-        )
-      : toast.success(
-          `Vous avez ajouté ${capitalize(pokemonName)} à votre pokedex ! `
-        ); */
+      ? toast.error(`Vous avez retiré ${name} de votre pokedex ! `)
+      : toast.success(`Vous avez ajouté ${name} à votre pokedex ! `);
   }
 
   return (
@@ -41,6 +32,7 @@ function NavbarCard() {
         type="button"
         className={styles.pokeballLogo}
         onClick={handleFavorite}
+        aria-label="add/delete"
       >
         <svg
           className={
@@ -96,7 +88,7 @@ function NavbarCard() {
           />
         </svg>
       </button>
-      {/*  <Toaster
+      <Toaster
         toastOptions={{
           className: "",
           style: {
@@ -106,7 +98,7 @@ function NavbarCard() {
             width: "70%",
           },
         }}
-      /> */}
+      />
     </nav>
   );
 }

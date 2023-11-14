@@ -5,8 +5,11 @@ import styles from "./Evolution.module.css";
 
 export default function Evolution({ evolution, pokemonName }) {
   Evolution.propTypes = {
-    evolution: PropTypes.objectOf.isRequired,
+    evolution: PropTypes.objectOf,
     pokemonName: PropTypes.string.isRequired,
+  };
+  Evolution.defaultProps = {
+    evolution: undefined,
   };
   const [nextSprite, setNextSprite] = useState([]);
   const [preSprite, setPreSprite] = useState([]);

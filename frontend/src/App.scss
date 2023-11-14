@@ -1,21 +1,47 @@
 @import "./style/utils";
-/* NAVBAR */
+// NAVBAR
 @import "./components/Navbar/Navbar.module.css";
-/* SEARCHBAR */
+@import "./components/Navbar/NavbarCard/NavbarCard.module.css";
+// SEARCHBAR
 @import "./components/Search/Search.module.css";
 @import "./components/Search/Searchbar/Searchbar.module.css";
 @import "./components/Search/Searchlist/Searchlist.module.css";
-/* HOMEPAGE */
-@import "./components/homePage/homepage.css";
+// HOMEPAGE
+@import "./components/HomePage/Homepage.css";
 @import "./components/Typespokemon/Typescard.css";
 @import "./components/Pokemonfiltre/Pokemonfiltre.css";
-/* CARD */
+// CARD
 @import "./components/Card/Card.module.css";
 @import "./components/Card/Name/Name.module.css";
 @import "./components/Card/StatsNavbar/StatNavbar.module.css";
 @import "./components/Card/StatsNavbar/Stats/Stats.module.css";
 @import "./components/Card/StatsNavbar/Evolution/Evolution.module.css";
 @import "./components/Card/StatsNavbar/Divers/Divers.module.css";
+
+// FONTS
+@font-face {
+  font-family: $ff-primary;
+  font-weight: $fw-bold;
+  src:
+    url("./style/fonts/primary-bold.woff2") format("woff2"),
+    url("./style/fonts/primary-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: $ff-secondary;
+  font-weight: $fw-regular;
+  src:
+    url("./style/fonts/secondary-regular.woff2") format("woff2"),
+    url("./style/fonts/secondary-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: $ff-secondary;
+  font-weight: $fw-semibold;
+  src:
+    url("./style/fonts/secondary-semibold.woff2") format("woff2"),
+    url("./style/fonts/secondary-semibold.woff") format("woff");
+}
 
 $navigationHeight: 10rem;
 
@@ -28,7 +54,7 @@ $navigationHeight: 10rem;
 body {
   height: 100vh;
   background-color: $fclr-white;
-  font-family: $ff-primary, $ff-secondary, $ff-tertiary, $ff-system_ui;
+  font-family: $ff-primary, $ff-secondary, $ff-default;
   font-weight: $fw-regular;
   line-height: $line-height;
   color: $fclr-black;
@@ -38,6 +64,9 @@ body {
   width: 100%;
   height: 100%;
 }
+
+@include headings;
+@include text;
 
 .navigation {
   @include flexboxColumn;

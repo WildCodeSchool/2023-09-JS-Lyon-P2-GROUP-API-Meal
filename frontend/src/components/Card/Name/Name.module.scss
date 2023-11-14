@@ -9,7 +9,6 @@
     @include flexboxRow;
     width: 100%;
     justify-content: space-between;
-    font-weight: $fw-bold;
 
     &--name {
       font-size: 2.5rem;
@@ -18,7 +17,7 @@
     }
 
     &--id {
-      font-size: 1.55rem;
+      font-size: 2rem;
       -webkit-text-stroke: 0.25px black;
       color: $fclr-white;
     }

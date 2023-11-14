@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-const normalizeString = (sansAccent) => {
+const normalText = (sansAccent) => {
   return sansAccent
     .toLowerCase()
     .normalize("NFD")
@@ -39,11 +40,12 @@ function PokemonFiltreCards() {
     <div className="display-pokemon">
       {filteredPokemon !== null
         ? filteredPokemon.map((pokemon) => (
-            <div
-              className="pokeTypeCard"
+            <Link
+              to={`/Card/${normalText(pokemon.name.fr)}`}
               key={pokemon.pokedexId}
+              className="pokeTypeCard"
               style={{
-                backgroundColor: `var(--${normalizeString(
+                backgroundColor: `var(--${normalText(
                   pokemon.types[0].name
                 )}-color)`,
               }}
@@ -54,7 +56,7 @@ function PokemonFiltreCards() {
                 alt={pokemon.name}
               />
               <p>{pokemon.name.fr}</p>
-            </div>
+            </Link>
           ))
         : null}
     </div>

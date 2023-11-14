@@ -7,7 +7,7 @@
 @import "./components/Search/Searchbar/Searchbar.module.css";
 @import "./components/Search/Searchlist/Searchlist.module.css";
 // HOMEPAGE
-@import "./components/homePage/homepage.css";
+@import "./components/HomePage/Homepage.css";
 @import "./components/Typespokemon/Typescard.css";
 @import "./components/Pokemonfiltre/Pokemonfiltre.css";
 // CARD
@@ -33,6 +33,14 @@
   src:
     url("./style/fonts/secondary-regular.woff2") format("woff2"),
     url("./style/fonts/secondary-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: $ff-secondary;
+  font-weight: $fw-semibold;
+  src:
+    url("./style/fonts/secondary-semibold.woff2") format("woff2"),
+    url("./style/fonts/secondary-semibold.woff") format("woff");
 }
 
 $navigationHeight: 10rem;

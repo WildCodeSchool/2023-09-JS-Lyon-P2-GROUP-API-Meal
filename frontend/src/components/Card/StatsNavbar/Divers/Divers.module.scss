@@ -16,18 +16,20 @@
 
     &--data {
       text-align: center;
-      font-size: 1.25rem;
-      font-weight: $fw-bold;
 
       h4 {
         opacity: 0.5;
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1.25rem;
       }
     }
   }
 
   &__body {
     @include flexboxColumn;
-    font-weight: $fw-bold;
 
     &--table {
       width: 100%;

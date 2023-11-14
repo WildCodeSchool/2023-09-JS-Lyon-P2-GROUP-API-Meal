@@ -38,6 +38,7 @@
   border-style: none;
   border-radius: 10px;
   cursor: pointer;
+  filter: drop-shadow(rgba(0, 0, 0, 0.05) 5px 15px 10px);
 }
 
 .pokeCard * {
@@ -54,11 +55,9 @@
 
 /* les noms */
 .pokeCard p {
-  font-family: Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
   text-align: center;
   color: white;
-  font-weight: 900;
   margin: 0px 0px 1rem 0px;
 }
 

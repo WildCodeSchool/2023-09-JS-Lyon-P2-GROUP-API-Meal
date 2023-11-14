@@ -1,10 +1,9 @@
 @import "../../../style/utils";
 
 .heroPicture {
+  @include pokemonSizeMedium;
   position: absolute;
   z-index: 3;
-  width: 300px;
-  aspect-ratio: 1;
   filter: drop-shadow(rgba(0, 0, 0, 0.5) 0 5px 5px) contrast(110%);
   top: 50%;
   left: 50%;
@@ -14,7 +13,7 @@
 }
 
 .isClicked {
-  width: 400px;
+  @include pokemonSizeBig;
   transform: translate(-50%, -50%);
   transition: all 0.2s;
 }

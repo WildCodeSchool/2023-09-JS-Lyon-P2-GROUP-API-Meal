@@ -7,9 +7,11 @@ const normalText = (sansAccent) => {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "");
 };
+
 function PokemonFiltreCards() {
   const [pokemonType, setPokemonType] = useState(null);
   const [filteredPokemon, setFilteredPokemon] = useState(null);
+  const [filtrePokemonEvent, setFiltrePokemonEvent] = useState(null);
 
   useEffect(() => {
     async function getType() {
@@ -23,14 +25,21 @@ function PokemonFiltreCards() {
   useEffect(() => {
     // la recupération des données depuis un composant //
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const filtrePokemonTypes = urlParams.get("filtrePokemonTypes");
+    const filtrePokemonTypes = new URLSearchParams(window.location.search).get(
+      "filtrePokemonTypes"
+    );
+    setFiltrePokemonEvent(filtrePokemonTypes);
 
     //  filtre les pokemons //
 
-    if (pokemonType !== null && filtrePokemonTypes) {
+    if (pokemonType !== null && filtrePokemonEvent) {
       const filtered = pokemonType.filter((item) => {
-        return item.types !== null && item.types[0].name === filtrePokemonTypes;
+        return (
+          item.types &&
+          item.types.some((typename) => {
+            return typename !== null && typename.name === filtrePokemonTypes;
+          })
+        );
       });
       setFilteredPokemon(filtered);
     }
@@ -46,7 +55,7 @@ function PokemonFiltreCards() {
               className="pokeTypeCard"
               style={{
                 backgroundColor: `var(--${normalText(
-                  pokemon.types[0].name
+                  filtrePokemonEvent
                 )}-color)`,
               }}
             >
@@ -55,7 +64,7 @@ function PokemonFiltreCards() {
                 src={pokemon.sprites.regular}
                 alt={pokemon.name}
               />
-              <p>{pokemon.name.fr}</p>
+              <p className="pokemon-name">{pokemon.name.fr}</p>
             </Link>
           ))
         : null}

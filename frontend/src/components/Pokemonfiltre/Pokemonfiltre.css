@@ -39,6 +39,7 @@
   margin: 0.5em auto;
   width: 11rem;
   height: 10rem;
+}
 
 .pokeTypeCard * {
   pointer-events: none;

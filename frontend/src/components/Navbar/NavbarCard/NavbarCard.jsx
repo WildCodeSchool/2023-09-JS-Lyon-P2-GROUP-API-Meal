@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { toast, Toaster } from "react-hot-toast";
@@ -7,19 +7,39 @@ import styles from "./NavbarCard.module.css";
 function NavbarCard({ pokemonName }) {
   NavbarCard.propTypes = { pokemonName: PropTypes.string.isRequired };
   const [isntFavorite, setFavorite] = useState(false);
+  const [favorisPokemon, setFavorisPokemon] = useState([]);
+  const [pokemonDisplayName, setPokemonDisplayName] = useState("");
   function capitalize(name) {
-    const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
-    return capitalizedName;
+    return name.charAt(0).toUpperCase() + name.slice(1);
   }
-
-  const name = capitalize(pokemonName);
+  useEffect(() => {
+    // Charger les favoris depuis le stockage local lors du montage du composant
+    const storedFavorites = JSON.parse(localStorage.getItem("favoris")) || [];
+    setFavorisPokemon(storedFavorites);
+    setPokemonDisplayName(capitalize(pokemonName));
+    setFavorite(storedFavorites.includes(pokemonName));
+  }, [pokemonName]);
 
   function handleFavorite() {
+    const updatedFavorites = [...favorisPokemon];
+    const isFavorite = updatedFavorites.includes(pokemonName);
+
+    if (isFavorite) {
+      const index = updatedFavorites.indexOf(pokemonName);
+      updatedFavorites.splice(index, 1);
+      toast.error(`Vous avez retiré ${pokemonDisplayName} de votre pokedex !`);
+    } else {
+      updatedFavorites.push(pokemonName);
+      toast.success(`Vous avez ajouté ${pokemonDisplayName} à votre pokedex !`);
+    }
+
+    setFavorisPokemon(updatedFavorites);
     setFavorite(!isntFavorite);
-    return isntFavorite
-      ? toast.error(`Vous avez retiré ${name} de votre pokedex ! `)
-      : toast.success(`Vous avez ajouté ${name} à votre pokedex ! `);
   }
+
+  useEffect(() => {
+    localStorage.setItem("favoris", JSON.stringify(favorisPokemon));
+  }, [favorisPokemon]);
 
   return (
     <nav className={styles.secondaryNavBar}>

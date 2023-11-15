@@ -5,6 +5,7 @@
   justify-content: space-between;
   padding: 1em;
 }
+
 .secondaryNavBar a {
   text-decoration: none;
   color: #232323;
@@ -20,6 +21,9 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+.pokeballLogo * {
+  pointer-events: none;
 }
 .secondaryNavBar svg {
   vertical-align: middle;

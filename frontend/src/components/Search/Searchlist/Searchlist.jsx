@@ -16,6 +16,7 @@ export default function Searchlist({ results }) {
   };
   // 👇 Suggest 6 choices maximum
   const limitedResults = results.slice(0, 6);
+
   return (
     <div className={styles["results-list"]}>
       {limitedResults.map((result) => (

@@ -80,6 +80,9 @@ export default function Evolution({ evolution, pokemonName }) {
 
   return (
     <div className={styles.wrapper}>
+      {evolution.next === null && evolution.pre === null && (
+        <h3>Ce pokemon n'a pas d'évolution !</h3>
+      )}
       {preSprite.map((el) => {
         return (
           <div key={el.pokedexId} className={styles.wrapper__icon}>

@@ -41,7 +41,7 @@ function Favoris() {
 
   return (
     <>
-      <h3 className="favoris-title">🅕🅐🅥🅞🅡🅘🅣🅔-🅟🅞🅚🅔🅜🅞🅝</h3>
+      <h3 className="favoris-title">Favorite-Pokemon</h3>
       <div className="display-pokemon">
         {afficheFavoris.map((favoris) => {
           const bgColor = normalizePokemonName(favoris.types[0].name);

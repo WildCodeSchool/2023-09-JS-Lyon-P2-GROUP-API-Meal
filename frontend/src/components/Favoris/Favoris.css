@@ -28,9 +28,12 @@
   margin: 0.5em auto;
 }
 .favoris-title {
-  font-size: 1.5em;
+  font-family: "Roboto", "Cabin condensed", "Cambay";
+  font-weight: 900;
+  font-size: 2em;
   text-align: center;
-  color: #7c4700;
+  color: black;
+  letter-spacing: 5px;
   text-decoration: underline;
 }
 

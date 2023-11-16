@@ -41,7 +41,11 @@ function Favoris() {
 
   return (
     <>
-      <h3 className="favoris-title">Favorite-Pokemon</h3>
+      <div style={{ textAlign: "center" }}>
+        <h1 className="favoris-title">Bienvenue dans ton pokedex</h1>
+        <p>Tu trouveras ici tous tes pokemons favoris</p>
+      </div>
+
       <div className="display-pokemon">
         {afficheFavoris.map((favoris) => {
           const bgColor = normalizePokemonName(favoris.types[0].name);

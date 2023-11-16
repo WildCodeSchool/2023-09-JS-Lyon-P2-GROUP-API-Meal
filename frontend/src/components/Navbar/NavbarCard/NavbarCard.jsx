@@ -13,7 +13,6 @@ function NavbarCard({ pokemonName }) {
     return name.charAt(0).toUpperCase() + name.slice(1);
   }
   useEffect(() => {
-    // Charger les favoris depuis le stockage local lors du montage du composant
     const storedFavorites = JSON.parse(localStorage.getItem("favoris")) || [];
     setFavorisPokemon(storedFavorites);
     setPokemonDisplayName(capitalize(pokemonName));

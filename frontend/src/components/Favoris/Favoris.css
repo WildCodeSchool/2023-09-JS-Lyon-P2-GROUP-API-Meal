@@ -25,6 +25,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   overflow: scroll;
+  margin: 0.5em auto;
 }
 
 .pokeFavoris {
@@ -61,6 +62,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    overflow: auto;
   }
 }
 @media screen and (min-width: 750px) and (max-width: 900px) {
@@ -68,12 +70,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+    overflow: auto;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 900px) {
   .display-pokemon {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
+    overflow: auto;
   }
 }

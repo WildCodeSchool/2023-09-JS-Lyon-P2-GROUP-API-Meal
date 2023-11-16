@@ -27,6 +27,12 @@
   overflow: scroll;
   margin: 0.5em auto;
 }
+.favoris-title {
+  font-size: 1.5em;
+  text-align: center;
+  color: #7c4700;
+  text-decoration: underline;
+}
 
 .pokeFavoris {
   display: flex;
@@ -64,6 +70,9 @@
     gap: 1rem;
     overflow: auto;
   }
+  .favoris-title {
+    font-size: 2.9em;
+  }
 }
 @media screen and (min-width: 750px) and (max-width: 900px) {
   .display-pokemon {
@@ -72,6 +81,9 @@
     gap: 1rem;
     overflow: auto;
   }
+  .favoris-title {
+    font-size: 3.5em;
+  }
 }
 @media screen and (min-width: 900px) {
   .display-pokemon {
@@ -79,5 +91,8 @@
     grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
     overflow: auto;
+  }
+  .favoris-title {
+    font-size: 5em;
   }
 }

@@ -40,29 +40,32 @@ function Favoris() {
   }, [getFavoris]);
 
   return (
-    <div className="display-pokemon">
-      {afficheFavoris.map((favoris) => {
-        const bgColor = normalizePokemonName(favoris.types[0].name);
+    <>
+      <h3 className="favoris-title">🅕🅐🅥🅞🅡🅘🅣🅔-🅟🅞🅚🅔🅜🅞🅝</h3>
+      <div className="display-pokemon">
+        {afficheFavoris.map((favoris) => {
+          const bgColor = normalizePokemonName(favoris.types[0].name);
 
-        return (
-          <Link
-            to={`/Card/${normalizePokemonName(favoris.name.fr)}`}
-            key={favoris.pokedexId}
-            className="pokeFavoris"
-            style={{
-              backgroundColor: `var(--${bgColor}-color, #ffffff)`,
-            }}
-          >
-            <img
-              className="pokemonImage"
-              src={favoris.sprites.regular}
-              alt={favoris.name.fr}
-            />
-            <p className="pokemon-name">{favoris.name.fr}</p>
-          </Link>
-        );
-      })}
-    </div>
+          return (
+            <Link
+              to={`/Card/${normalizePokemonName(favoris.name.fr)}`}
+              key={favoris.pokedexId}
+              className="pokeFavoris"
+              style={{
+                backgroundColor: `var(--${bgColor}-color, #ffffff)`,
+              }}
+            >
+              <img
+                className="pokemonImage"
+                src={favoris.sprites.regular}
+                alt={favoris.name.fr}
+              />
+              <p className="pokemon-name">{favoris.name.fr}</p>
+            </Link>
+          );
+        })}
+      </div>
+    </>
   );
 }
 

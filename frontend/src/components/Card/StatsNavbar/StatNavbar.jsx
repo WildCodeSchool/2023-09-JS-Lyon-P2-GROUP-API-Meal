@@ -60,6 +60,7 @@ function StatNavbar({ pokemonName, setIsClicked, isClicked }) {
       <button
         id={1}
         type="button"
+        aria-label="button"
         onClick={handleTabClick}
         className={styles.arrow}
         style={isClicked === false ? { display: "none" } : null}

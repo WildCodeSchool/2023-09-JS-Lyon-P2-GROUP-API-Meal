@@ -27,7 +27,7 @@ export default function Hero({ pokemonName, setIsClicked, isClicked }) {
   }, [pokemonName]);
 
   return (
-    <button type="button" onClick={handleClick}>
+    <button type="button" onClick={handleClick} aria-label="button">
       <img
         className={`${styles.heroPicture} ${isClicked && styles.isClicked}`}
         src={heroPicture.regular}

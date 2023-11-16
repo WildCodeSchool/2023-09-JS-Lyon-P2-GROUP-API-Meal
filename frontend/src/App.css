@@ -14,6 +14,7 @@
 @import "./components/Card/StatsNavbar/Stats/Stats.module.css";
 @import "./components/Card/StatsNavbar/Evolution/Evolution.module.css";
 @import "./components/Card/StatsNavbar/Divers/Divers.module.css";
+@import "./components/Favoris/Favoris.css";
 *,
 *::before,
 *::after {

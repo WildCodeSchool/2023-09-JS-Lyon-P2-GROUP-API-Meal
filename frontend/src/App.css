@@ -6,6 +6,7 @@
 @import "./components/HomePage/Homepage.css";
 @import "./components/Typespokemon/Typescard.css";
 @import "./components/Pokemonfiltre/Pokemonfiltre.css";
+@import "./components/Favoris/Favoris.css";
 @import "./components/Card/Card.module.css";
 @import "./components/Card/Name/Name.module.css";
 @import "./components/Card/StatsNavbar/StatNavbar.module.css";
@@ -48,6 +49,7 @@ body {
   font-weight: 400;
   line-height: 1.25;
   color: #232323;
+  overflow: hidden;
 }
 
 #root {

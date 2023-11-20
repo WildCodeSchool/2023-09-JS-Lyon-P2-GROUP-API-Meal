@@ -10,6 +10,7 @@
 @import "./components/HomePage/Homepage.css";
 @import "./components/Typespokemon/Typescard.css";
 @import "./components/Pokemonfiltre/Pokemonfiltre.css";
+@import "./components/Favoris/Favoris.css";
 // CARD
 @import "./components/Card/Card.module.css";
 @import "./components/Card/Name/Name.module.css";
@@ -58,6 +59,7 @@ body {
   font-weight: $fw-regular;
   line-height: $line-height;
   color: $fclr-black;
+  overflow: hidden;
 }
 
 #root {

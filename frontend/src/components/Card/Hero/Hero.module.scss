@@ -9,7 +9,7 @@
   left: 50%;
   transform: translate(-50%, -85%);
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s;
 }
 
 .hero_button {
@@ -20,5 +20,5 @@
 .isClicked {
   @include pokemonSizeBig;
   transform: translate(-50%, -50%);
-  transition: all 0.2s;
+  transition: all 0.3s;
 }

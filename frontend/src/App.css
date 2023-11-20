@@ -6,6 +6,7 @@
 @import "./components/HomePage/Homepage.css";
 @import "./components/Typespokemon/Typescard.css";
 @import "./components/Pokemonfiltre/Pokemonfiltre.css";
+@import "./components/Favoris/Favoris.css";
 @import "./components/Card/Card.module.css";
 @import "./components/Card/Name/Name.module.css";
 @import "./components/Card/StatsNavbar/StatNavbar.module.css";

@@ -6,7 +6,6 @@
   flex-wrap: wrap;
   margin-top: 1rem;
   text-align: center;
-  overflow-y: scroll;
 
   &__icon {
     @include flexboxColumn;

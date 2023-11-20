@@ -10,6 +10,7 @@
   background-color: $clr-cardFooter;
   transition: all 0.2s;
   filter: drop-shadow(rgba(0, 0, 0, 0.25) 2px 0px 10px);
+  overflow-x: scroll;
 
   .arrow {
     position: absolute;
@@ -80,4 +81,5 @@
 .isClicked {
   transform: translateY(70%);
   transition: all 0.2s;
+  overflow: visible;
 }

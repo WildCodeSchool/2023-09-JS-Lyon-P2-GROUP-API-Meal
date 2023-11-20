@@ -1,5 +1,5 @@
 .heroPicture {
-  width: 18.75rem;
+  width: 16.75rem;
   aspect-ratio: 1;
   position: absolute;
   z-index: 3;
@@ -9,6 +9,11 @@
   transform: translate(-50%, -85%);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+}
+
+.hero_button {
+  background-color: transparent;
+  border: none;
 }
 
 .isClicked {

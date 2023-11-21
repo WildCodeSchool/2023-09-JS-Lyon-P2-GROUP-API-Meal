@@ -17,7 +17,7 @@ function StatNavbar({ pokemonName, setIsClicked, isClicked }) {
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
-        `https://api-pokemon-fr.vercel.app/api/v1/pokemon/${pokemonName}`
+        `https://tyradex.tech/api/v1/pokemon/${pokemonName}`
       );
 
       const data = await response.json();
@@ -60,6 +60,7 @@ function StatNavbar({ pokemonName, setIsClicked, isClicked }) {
       <button
         id={1}
         type="button"
+        aria-label="button"
         onClick={handleTabClick}
         className={styles.arrow}
         style={isClicked === false ? { display: "none" } : null}

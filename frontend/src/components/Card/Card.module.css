@@ -1,11 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&display=swap");
-/* COLORS */
-/* FONTS */
-/* DISPLAY */
 .container {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
-} /*# sourceMappingURL=Card.module.css.map */
+}
+.container .pokeball {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.25;
+  top: 20%;
+  left: 30%;
+}
+.container .pokeball__svg {
+  animation: rotate 17500ms normal linear infinite;
+  position: fixed;
+  pointer-events: none;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate3d(0, 0, 1, 0deg) scale(1.25);
+  }
+  25% {
+    transform: rotate3d(0, 0, 1, 90deg) scale(1.5);
+  }
+  50% {
+    transform: rotate3d(0, 0, 1, 180deg) scale(1.75);
+  }
+  75% {
+    transform: rotate3d(0, 0, 1, 270deg) scale(1.5);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg) scale(1.25);
+  }
+}

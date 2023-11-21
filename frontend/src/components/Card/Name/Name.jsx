@@ -25,7 +25,7 @@ export default function Name({ pokemonName }) {
     }
     async function fetchData() {
       const response = await fetch(
-        `https://api-pokemon-fr.vercel.app/api/v1/pokemon/${pokemonName}`
+        `https://tyradex.tech/api/v1/pokemon/${pokemonName}`
       );
 
       const data = await response.json();
@@ -34,7 +34,6 @@ export default function Name({ pokemonName }) {
     }
     fetchData();
   }, [pokemonName]);
-
   return (
     <section className={styles.wrapper}>
       <div className={styles.wrapper__pokemon}>

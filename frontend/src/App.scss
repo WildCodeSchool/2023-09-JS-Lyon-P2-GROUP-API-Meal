@@ -1,21 +1,50 @@
 @import "./style/utils";
-/* NAVBAR */
+// NAVBAR
 @import "./components/Navbar/Navbar.module.css";
-/* SEARCHBAR */
+@import "./components/Navbar/NavbarCard/NavbarCard.module.css";
+// SEARCHBAR
 @import "./components/Search/Search.module.css";
 @import "./components/Search/Searchbar/Searchbar.module.css";
 @import "./components/Search/Searchlist/Searchlist.module.css";
-/* HOMEPAGE */
-@import "./components/homePage/homepage.css";
+// HOMEPAGE
+@import "./components/HomePage/Homepage.css";
 @import "./components/Typespokemon/Typescard.css";
 @import "./components/Pokemonfiltre/Pokemonfiltre.css";
-/* CARD */
+@import "./components/Favoris/Favoris.css";
+// CARD
 @import "./components/Card/Card.module.css";
 @import "./components/Card/Name/Name.module.css";
 @import "./components/Card/StatsNavbar/StatNavbar.module.css";
 @import "./components/Card/StatsNavbar/Stats/Stats.module.css";
 @import "./components/Card/StatsNavbar/Evolution/Evolution.module.css";
 @import "./components/Card/StatsNavbar/Divers/Divers.module.css";
+
+// FONTS
+@font-face {
+  font-family: $ff-primary;
+  font-weight: $fw-bold;
+  src:
+    url("./style/fonts/primary-bold.woff2") format("woff2"),
+    url("./style/fonts/primary-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: $ff-secondary;
+  font-weight: $fw-regular;
+  src:
+    url("./style/fonts/secondary-regular.woff2") format("woff2"),
+    url("./style/fonts/secondary-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: $ff-secondary;
+  font-weight: $fw-semibold;
+  src:
+    url("./style/fonts/secondary-semibold.woff2") format("woff2"),
+    url("./style/fonts/secondary-semibold.woff") format("woff");
+}
+
+$navigationHeight: 10rem;
 
 *,
 *::before,
@@ -24,9 +53,9 @@
 }
 
 body {
-  overflow: auto;
   height: 100vh;
-  font-family: $ff-primary, $ff-secondary, $ff-tertiary, $ff-system_ui;
+  background-color: $fclr-white;
+  font-family: $ff-primary, $ff-secondary, $ff-default;
   font-weight: $fw-regular;
   line-height: $line-height;
   color: $fclr-black;
@@ -35,4 +64,25 @@ body {
 #root {
   width: 100%;
   height: 100%;
+}
+
+@include headings;
+@include text;
+
+.navigation {
+  @include flexboxColumn;
+  justify-content: space-between;
+  position: fixed;
+  border-radius: 0 0 50px 50px;
+  z-index: 99999;
+  width: clamp(375px, 100%, 1440px);
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background-color: $fclr-white;
+  height: $navigationHeight;
+  filter: drop-shadow(rgba(0, 0, 0, 0.5) 0 3px 10px);
+}
+
+.appBody {
+  padding-top: calc($navigationHeight + 1em);
 }

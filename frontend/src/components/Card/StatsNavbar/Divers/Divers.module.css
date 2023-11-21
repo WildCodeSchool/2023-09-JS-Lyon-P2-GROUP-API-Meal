@@ -1,15 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&display=swap");
-/* COLORS */
-/* FONTS */
-/* DISPLAY */
 .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 1em;
   width: 100%;
   gap: 1rem;
 }
@@ -19,24 +13,25 @@
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  padding: 1em;
+  padding: 0.5em;
   border-radius: 20px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 }
 .wrapper__header--data {
   text-align: center;
-  font-size: 1.25rem;
-  font-weight: 700;
 }
 .wrapper__header--data h4 {
   opacity: 0.5;
+  font-size: 1.5rem;
+}
+.wrapper__header--data p {
+  font-size: 1.25rem;
 }
 .wrapper__body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
 }
 .wrapper__body--table {
   width: 100%;
@@ -48,7 +43,6 @@
 .wrapper__body--tr {
   width: 100%;
   display: inline-table;
-  margin: 0.5rem 0;
 }
 .wrapper__body--tr td {
   width: 33.33%;
@@ -86,4 +80,4 @@
   filter: invert(72%) sepia(25%) saturate(516%) hue-rotate(11deg)
     brightness(101%) contrast(93%);
   vertical-align: -30%;
-} /*# sourceMappingURL=Divers.module.css.map */
+}

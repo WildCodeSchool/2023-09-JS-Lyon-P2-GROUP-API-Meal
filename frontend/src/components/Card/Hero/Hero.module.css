@@ -1,15 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&display=swap");
-/* COLORS */
-/* FONTS */
-/* DISPLAY */
 .heroPicture {
+  width: 16.75rem;
+  aspect-ratio: 1;
   position: absolute;
   z-index: 3;
-  width: 300px;
-  aspect-ratio: 1;
-  filter: drop-shadow(rgba(0, 0, 0, 0.5) 0 5px 5px);
+  filter: drop-shadow(rgba(0, 0, 0, 0.5) 0 5px 5px) contrast(110%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -85%);
@@ -17,8 +11,14 @@
   transition: all 0.2s;
 }
 
+.hero_button {
+  background-color: transparent;
+  border: none;
+}
+
 .isClicked {
-  width: 400px;
+  width: 25rem;
+  aspect-ratio: 1;
   transform: translate(-50%, -50%);
-  transition: all 0.2s;
-} /*# sourceMappingURL=Hero.module.css.map */
+  transition: all 0.3s;
+}

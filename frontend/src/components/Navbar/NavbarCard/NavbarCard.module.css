@@ -1,0 +1,32 @@
+.secondaryNavBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+.secondaryNavBar a {
+  text-decoration: none;
+  color: #232323;
+  font-size: 2rem;
+  border: none;
+  background-color: transparent;
+  width: 35px;
+  aspect-ratio: 1;
+}
+.secondaryNavBar .pokeballLogo {
+  width: 50px;
+  aspect-ratio: 1;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.secondaryNavBar svg {
+  vertical-align: middle;
+}
+.secondaryNavBar .isntFavorite {
+  filter: grayscale(100%);
+}
+.secondaryNavBar .isFavorite {
+  filter: grayscale(0) contrast(120%);
+}

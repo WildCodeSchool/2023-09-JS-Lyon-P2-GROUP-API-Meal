@@ -4,19 +4,21 @@
   @include flexboxRow;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  height: 18rem;
+  margin-top: 1rem;
+  text-align: center;
 
   &__icon {
     @include flexboxColumn;
 
     &--img {
-      width: 155px;
-      aspect-ratio: 1;
+      @include pokemonSizeSmall;
       filter: drop-shadow(rgba(0, 0, 0, 0.25) 0 5px 5px);
     }
   }
-  p {
-    font-weight: $fw-bold;
+
+  &__name {
+    font-size: 1.25rem;
+    margin-bottom: 0;
   }
 
   .evolution__button {

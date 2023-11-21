@@ -1,0 +1,37 @@
+@import "../../../style/utils";
+
+.secondaryNavBar {
+  @include flexboxRow;
+  justify-content: space-between;
+  padding: 1em;
+
+  a {
+    text-decoration: none;
+    color: $fclr-black;
+    font-size: 2rem;
+    border: none;
+    background-color: transparent;
+    width: 35px;
+    aspect-ratio: 1;
+  }
+
+  .pokeballLogo {
+    width: 50px;
+    aspect-ratio: 1;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  svg {
+    vertical-align: middle;
+  }
+
+  .isntFavorite {
+    filter: grayscale(100%);
+  }
+
+  .isFavorite {
+    filter: grayscale(0) contrast(120%);
+  }
+}

@@ -4,11 +4,15 @@ import Search from "../Search/Search";
 
 function Pokemonfiltre() {
   return (
-    <div className="App">
-      <Navbar />
-      <Search />
-      <Pokemonfiltrecard />
-    </div>
+    <>
+      <section className="navigation">
+        <Navbar />
+        <Search />
+      </section>
+      <section className="appBody">
+        <Pokemonfiltrecard />
+      </section>
+    </>
   );
 }
 

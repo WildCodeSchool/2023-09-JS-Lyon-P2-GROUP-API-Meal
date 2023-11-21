@@ -1,16 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&display=swap");
-/* COLORS */
-/* FONTS */
-/* DISPLAY */
 .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1.55rem;
-  color: #ffffff;
+  color: #f5f5f5;
 }
 .wrapper__pokemon {
   display: flex;
@@ -18,28 +12,28 @@
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  font-weight: 700;
 }
 .wrapper__pokemon--name {
   font-size: 2.5rem;
   -webkit-text-stroke: 0.5px black;
-  filter: drop-shadow(rgba(0, 0, 0, 0.75) 0 5px 25px);
+  filter: drop-shadow(rgba(0, 0, 0, 0.25) 0 3px 5px) contrast(200%);
 }
 .wrapper__pokemon--id {
-  font-size: 1.55rem;
+  font-size: 2rem;
   -webkit-text-stroke: 0.25px black;
-  color: #ffffff;
+  color: #f5f5f5;
 }
 .wrapper__type {
   display: inline-flex;
   width: 100%;
   gap: 0.5em;
   z-index: 10;
-  filter: drop-shadow(rgba(0, 0, 0, 0.75) 0 5px 25px);
+  color: #232323;
+  filter: drop-shadow(rgba(0, 0, 0, 0.25) 0 3px 5px) contrast(200%);
 }
 .wrapper__type--value {
   font-size: 0.9rem;
   padding: 0.25em 1.75em;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50px;
-} /*# sourceMappingURL=Name.module.css.map */
+}

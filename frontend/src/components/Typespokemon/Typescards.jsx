@@ -37,7 +37,6 @@ function Typescards() {
           type="button"
           className="pokeCard"
           key={iconType.name}
-          data-pokemontype={iconType.name}
           onClick={(e) => filtrePokemonTypes(e.target.value)}
           style={{
             backgroundColor: `var(--${iconType.noAccentName.toLowerCase()}-color)`,

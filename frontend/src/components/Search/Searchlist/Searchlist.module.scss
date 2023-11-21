@@ -4,20 +4,34 @@
   @include flexboxColumn;
   position: absolute;
   z-index: 1;
-  cursor: pointer;
   width: 100%;
-  margin-top: 1rem;
   border-radius: 25px;
   background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+
+  a {
+    width: 100%;
+
+    &:hover {
+      background-color: black;
+    }
+
+    &:first-child {
+      border-radius: 25px 25px 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 25px 25px;
+    }
+  }
 
   &__result {
     padding: 0.25em;
     text-align: center;
     background-color: transparent;
     border: none;
-    font-family: $ff-secondary;
-    font-weight: $fw-semi-bold;
     font-size: 1.5rem;
     color: whitesmoke;
+    cursor: pointer;
   }
 }
